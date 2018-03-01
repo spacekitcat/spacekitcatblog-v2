@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.hackertext { 
+  word-wrap: break-word;
+  font-family: Monospace;
+  font-size: 10px;
+  padding: 0;
+}
+
+p {
+  letter-spacing: 1.25px;
+}
+
+
