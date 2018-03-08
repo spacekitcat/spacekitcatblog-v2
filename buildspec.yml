@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging into AWS ECR...
+      - aws --version
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      - REPOSITORY_URI=269582088082.dkr.ecr.eu-west-2.amazonaws.com/spacekitcat
+      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - echo $IMAGE_TAG
+  build:
+    commands:
+      - echo Doing docker build...
+      - ls -laRt
+      - docker build -t $REPOSITORY_URI:latest . --no-cache
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed
+      - echo Pushing to cotainer to registry
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+artifacts:
+  files: Dockerrun.aws.json
+
+
+
+
