@@ -14,19 +14,19 @@ var hacker_text_config =
   {
     targets: [{
       htmlId: "hackertext",
-      text: "DONT_FEAR_PERFECTION_YOULL_NEVER_MEET_IT_",
+      text: "SPACE_",
       framerate: 5,
       rows: 15
     },
       {
         htmlId: "hackertexttwo",
-        text: "SPACE_KIT_CAT_",
+        text: "KIT_",
         framerate: 1,
         rows: 15
       },
       {
         htmlId: "hackertextthree",
-        text: "DONT_FEAR_PERFECTION_YOULL_NEVER_MEET_IT_",
+        text: "CAT_",
         framerate: 5,
         rows: 18
       }]};
