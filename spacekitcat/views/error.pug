@@ -1,6 +1,23 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=", crossorigin="anonymous")
+    script(type='text/javascript').
+      var hacker_text_config = {
+        targets: [
+      {
+        htmlId: "hackertext",
+        text: "#{errstatus}",
+        framerate: 4,
+        rows: 15
+      }]};
+ 
+  body
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    div(class='hackertext', id='hackertext')
+    div(class='stats', id='stats')
+        p server
+            b  #{servername}
+    script(src="./javascripts/bundle.js")
