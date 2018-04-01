@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build:browserify": "browserify browserify/main.js -o public/javascripts/bundle.js",
+    "build:browserify": "node_modules/.bin/browserify browserify/main.js -o public/javascripts/bundle.js",
     "build": "npm run build:browserify"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "brfs": "^1.4.4",
+    "browserify": "^16.1.1",
     "browserify-css": "^0.14.0",
     "fs": "0.0.1-security",
     "insert-css": "^2.0.0",
