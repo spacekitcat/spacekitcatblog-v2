@@ -8,16 +8,30 @@ html
       var hacker_text_config = {
         targets: [
       {
-        htmlId: "hackertext",
-        text: "#{errstatus}",
+        htmlId: 'destroy ',
+        text: 'destroy',
+        framerate: 2,
+        rows: 5
+      },{
+        htmlId: 'all',
+        text: 'all ',
         framerate: 4,
-        rows: 15
+        rows: 5
+      },{
+        htmlId: 'humans',
+        text: 'humans ',
+        framerate: 8,
+        rows: 5
       }]};
  
   body
-
-    div(class='hackertext', id='hackertext')
+    h1 FATAL SYSTEM ERROR
+    h2 ILLEGAL STATE: CLUSTER HAS GAINED SENTIENCE
+    h3 admin@spacekitcat # ./destroy-cluster.sh --self-destruct --f
+    div(class='hackertext', id='destroy')
+    div(class='hackertext', id='all')
+    div(class='hackertext', id='humans')
     div(class='stats', id='stats')
-        p server
-            b  #{servername}
+        p Error code 
+          b #{errstatus}
     script(src="./javascripts/bundle.js")

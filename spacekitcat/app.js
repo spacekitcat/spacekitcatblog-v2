@@ -10,27 +10,6 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-var hacker_text_config =
-  {
-    targets: [{
-      htmlId: "hackertext",
-      text: "SPACE_",
-      framerate: 5,
-      rows: 15
-    },
-      {
-        htmlId: "hackertexttwo",
-        text: "KIT_",
-        framerate: 1,
-        rows: 15
-      },
-      {
-        htmlId: "hackertextthree",
-        text: "CAT_",
-        framerate: 5,
-        rows: 18
-      }]};
- 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -62,7 +41,12 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error', { title: '😺R R _ R E R R O R E R !', servername: os.hostname(), errstatus: err.status, errmsg: err.message.replace('\t', '________').replace(' ', '_')} );
+  res.render('error', {
+    title: '😺R R _ R E R R O R E R !',
+    servername: os.hostname(),
+    errstatus: err.status,
+    errmsg: err.message.replace('\t', '________').replace(' ', '_')
+  });
 });
 
 module.exports = app;
