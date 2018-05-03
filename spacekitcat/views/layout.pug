@@ -8,35 +8,26 @@ html
       var hacker_text_config = {
         targets: [
       {
-        htmlId: "hackertextone",
-        text: "KRRRBU_BN!",
-        framerate: 8,
-        rows: 3
-      },
-      {
         htmlId: "hackertexttwo",
-        text: "DONT_FEAR_PERFECTION_YOULL_NEVER_MEET_IT_",
-        framerate: 3,
-        rows: 10
-      },
-      {
-        htmlId: "hackertextthree",
-        text: "SPACE_KIT_CAT_",
-        framerate: 2,
+        text: "spacekitcat",
+
+        renderer: {
+            strategy: 'SinePhaseFrameRenderStrategy'
+        },
+        framerate: 6,
         rows: 20
       },
       {
-        htmlId: "hackertextfour",
-        text: "DONT_FEAR_PERFECTION_YOULL_NEVER_MEET_IT_",
-        framerate: 3,
-        rows: 10
-      },
-      {
-        htmlId: "hackertextfive",
-        text: "DA!_",
-        framerate: 8,
+        htmlId: "hackertextthree",
+        text: "peace sells but whos buying",
+
+        renderer: {
+            strategy: 'SinePhaseFrameRenderStrategy'
+        },
+        framerate: 2,
         rows: 3
-      }]};
+      },
+     ]};
  
   body
     block content

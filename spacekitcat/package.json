@@ -8,21 +8,21 @@
     "build": "npm run build:browserify"
   },
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "hackertextjs": "^0.1.29",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "express": "^4.15.5",
+    "hackertextjs": "*",
     "lodash": "^4.17.5",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
-    "serve-favicon": "~2.4.5"
+    "morgan": "^1.9.0",
+    "pug": "^2.0.0-beta11",
+    "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
     "brfs": "^1.4.4",
     "browserify": "^16.1.1",
     "browserify-css": "^0.14.0",
-    "fs": "0.0.1-security",
+    "fs": "^0.0.1-security",
     "insert-css": "^2.0.0",
     "jquery": "^3.3.1",
     "jquery-browserify": "^1.8.1",
