@@ -1,15 +1,24 @@
 body {
+  background-color: #292b29;
+  color: #3fdf3f;
   padding: 50px;
   font-size: 14px;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Cutive', serif;
+}
 
+.headerlogo {
+  letter-spacing: 4px;
+}
+
+.headerurl {
+  letter-spacing: 2px;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
-.hackertext { 
+.hackertext {
   word-wrap: break-word;
   font-family: Monospace;
   font-size: 10px;
@@ -20,4 +29,6 @@ p {
   letter-spacing: 1.25px;
 }
 
-
+.brightred {
+  color: #df3f3f;
+}

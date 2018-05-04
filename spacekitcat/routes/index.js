@@ -16,7 +16,7 @@ let hacker_text_config = {
     },
     {
       htmlId: 'hackertextthree',
-      text: 'peace sells but whos buying',
+      text: '01110011',
 
       renderer: {
         strategy: 'SinePhaseFrameRenderStrategy'
