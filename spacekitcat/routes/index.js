@@ -5,24 +5,34 @@ var os = require('os');
 let hacker_text_config = {
   targets: [
     {
-      htmlId: 'hackertexttwo',
+      htmlId: 'hackertextone',
       text: 'spacekitcat',
 
       renderer: {
         strategy: 'SinePhaseFrameRenderStrategy'
       },
       framerate: 6,
-      rows: 20
+      rows: 16
+    },
+    {
+      htmlId: 'hackertexttwo',
+      text: 'spacekitcat',
+
+      renderer: {
+        strategy: 'RandomizedFrameRenderStrategy'
+      },
+      framerate: 3,
+      rows: 4
     },
     {
       htmlId: 'hackertextthree',
-      text: '01110011',
+      text: 'spacekitcat',
 
       renderer: {
         strategy: 'SinePhaseFrameRenderStrategy'
       },
-      framerate: 2,
-      rows: 3
+      framerate: 6,
+      rows: 16
     }
   ]
 };
