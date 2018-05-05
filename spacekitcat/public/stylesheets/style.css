@@ -2,6 +2,7 @@ body {
   background-color: #292b29;
   color: #3fdf3f;
   padding: 50px;
+  padding-top: 25px;
   font-size: 14px;
   font-family: 'Cutive', serif;
 }
@@ -12,10 +13,15 @@ body {
 
 .headerurl {
   letter-spacing: 2px;
+  padding-bottom: 12.5px;
 }
 
 a {
   color: #00b7ff;
+}
+
+#hackertextcontainer {
+  padding-bottom: 6.25px;
 }
 
 .hackertext {

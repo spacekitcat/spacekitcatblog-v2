@@ -29,7 +29,7 @@ let hacker_text_config = {
       text: 'spacekitcat',
 
       renderer: {
-        strategy: 'SinePhaseFrameRenderStrategy'
+        strategy: 'CoSinePhaseFrameRenderStrategy'
       },
       framerate: 6,
       rows: 16
