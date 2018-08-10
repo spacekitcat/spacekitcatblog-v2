@@ -1,0 +1,71 @@
+$gel-grid-enable--markup-output: true;
+$gel-type-enable--markup-output: true;
+$gel-type-enable--font-family: true;
+
+@import 'node_modules/gel-sass-tools/sass-tools';
+@import 'node_modules/sass-mq/mq';
+@import 'node_modules/gel-grid/grid';
+@import 'node_modules/gel-typography/typography';
+
+@import url('https://fonts.googleapis.com/css?family=Monoton|VT323');
+
+$black: #000;
+$green: #009F00;
+$offblack: #000F00;
+
+body {
+    background-color: $offblack;
+    color: $green;
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    color: $offblack;
+}
+
+.hackertext-container {
+    /* relative will contain the hackertext 'before' 
+       pseudo element (absolute positioning). It
+       would otherwise continue to climb the DOM
+       heirarchy */
+    position: relative;
+    z-index: -3;
+}
+
+.hackertext {
+    color: $green;
+    font-family: monospace;
+    height: auto;
+    position: absolute;
+    user-select: none;
+    word-break: break-all;
+    z-index: 1;
+    margin-top: double($gel-spacing-unit);
+}
+
+.hackertext::before {
+    content: "";
+    background-color: rgba($black, 0.80);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index:2;
+}
+
+.header {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.sitename {
+    color: $green;
+    padding-top: 0;
+}
+
+.content p {
+    @include gel-typography('body-copy');
+}
