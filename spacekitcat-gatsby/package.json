@@ -4,13 +4,21 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
     "gel-grid": "^4.0.0",
     "gel-typography": "^2.0.5",
-    "react-helmet": "^5.2.0"
+    "http-server": "^0.11.1",
+    "morgan": "^1.9.0",
+    "prop-types": "^15.6.2",
+    "pug": "^2.0.3",
+    "react": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "serve-favicon": "^2.5.0"
   },
   "keywords": [
     "gatsby"
@@ -21,10 +29,17 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./public -p 3000"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-graphql": "^2.1.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
     "hackertextjs": "^0.4.0",
     "jquery": "^3.3.1",
     "prettier": "^1.13.7"

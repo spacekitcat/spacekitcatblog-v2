@@ -2,19 +2,24 @@ $gel-grid-enable--markup-output: true;
 $gel-type-enable--markup-output: true;
 $gel-type-enable--font-family: true;
 
+// BBC imports 
 @import 'node_modules/gel-sass-tools/sass-tools';
 @import 'node_modules/sass-mq/mq';
 @import 'node_modules/gel-grid/grid';
 @import 'node_modules/gel-typography/typography';
 
-@import url('https://fonts.googleapis.com/css?family=Monoton|VT323');
+// Google imports
+@import url('https://fonts.googleapis.com/css?family=Monoton|VT323|Source+Code+Pro');
 
 $black: #000;
 $green: #009F00;
 $offblack: #000F00;
+$white: #C4C4C4;
+$orange: rgb(252, 79, 36);
+$orange-contrast: rgb(250, 250, 33);
 
 body {
-    background-color: $offblack;
+    background-color: $black;
     color: $green;
     font-family: 'VT323', monospace;
     margin: 0;
@@ -25,13 +30,25 @@ body {
     color: $offblack;
 }
 
-.hackertext-container {
+// The pseudo elements can climb the DOM, hence the use of the word 'isolation'
+.hackertext-isolation-container {
     /* relative will contain the hackertext 'before' 
        pseudo element (absolute positioning). It
        would otherwise continue to climb the DOM
        heirarchy */
     position: relative;
+    width: 100%;
     z-index: -3;
+    height: auto;
+}
+
+.hackertext-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -2;
+    height: 200px;
 }
 
 .hackertext {
@@ -41,18 +58,21 @@ body {
     position: absolute;
     user-select: none;
     word-break: break-all;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 1;
-    margin-top: double($gel-spacing-unit);
 }
 
 .hackertext::before {
     content: "";
-    background-color: rgba($black, 0.80);
+    background-color: rgba($black, 0.70);
     bottom: 0;
     left: 0;
     position: absolute;
     top: 0;
     right: 0;
+    width: 100%;
     z-index:2;
 }
 
@@ -66,6 +86,115 @@ body {
     padding-top: 0;
 }
 
-.content p {
+.column-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    @include gel-wrap;
+}
+
+.column-wrapper {
+    @include gel-layout;
+}
+
+.content {
+    @include gel-columns(2/9);
     @include gel-typography('body-copy');
+    margin-right: triple($gel-spacing-unit);
+
+    color: $orange;
+}
+
+.sitename {
+    direction: rtl;    
+}
+
+.item {
+    @include gel-layout;
+    background-color: rgba($green, 0.1);
+
+    color: $orange;
+    margin-top: $gel-spacing-unit;
+}
+
+.item::before {
+    border-color: rgba($orange, 0.6);
+    border-style: none none none none;
+    border-width: 1px;
+}
+
+.item a {
+    text-decoration: none;
+    color: $white;
+}
+
+.item-label {
+    @include gel-layout-item;
+    @include gel-typography('trafalgar-bold');
+    text-align: center;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+    //padding: 0;
+    //padding: auto;
+    font-family: 'VT323', monospace;
+}
+
+.item-label:before {
+    position: absolute;
+    // content: "> ";
+    //margin: 0 0 -50px -50px;
+    font-size: 38px;
+}
+
+.item-label:after {
+    content: "";
+}
+
+
+.item-meta {
+    @include gel-layout;
+    @include gel-columns(12);
+    border-top: solid;
+    border-width: 1px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-family: 'VT323', monospace;
+}
+
+.item-meta-item,
+.item-meta-item--red {
+    @include gel-layout-item;
+    @include gel-columns(1/12);
+    vertical-align: middle;
+}
+
+
+.item-label img {
+    width:100%; 
+}
+
+.item a:active {
+    text-decoration: none;
+    color: $orange-contrast;
+}
+
+.item a:visited {
+    text-decoration: none;
+    color: $white;
+}
+
+.item a:hover {
+    text-decoration: none;
+    color: $orange-contrast;
+}
+
+.list {
+
+    border-color: rgba($orange, 0.6);
+    padding-bottom: triple($gel-spacing-unit);
+}
+.list h2 {
+    color: $white;
 }
