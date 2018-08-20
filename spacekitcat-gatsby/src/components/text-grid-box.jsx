@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const TextGridBox = ({ text }) => (
   <div className="questionbox">
     <div className="questionboxcontent">
-      <p>{text}</p>
+      <a href="#lisaspacestation">{text}</a>
     </div>
   </div>
 );
