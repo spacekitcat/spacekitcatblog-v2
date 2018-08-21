@@ -80,9 +80,9 @@ body {
   100% {top: 0px; left: 0; color:  rgba(green, 0.1f); display: none;}
 }
 
-.hackertext::before {
-  content: "It's all a god damn fake, man. It's like Lenin said: you look for the person who will benefit, and, uh, uh, you know...";
-  animation: hts-anim 2s alternate both running;
+.hackertext::after {
+  content: "Misogynists can die in a fire, am I right Donny?";
+  animation: hts-anim 4s alternate both running;
   background-color: rgba($black, 0.7);
   bottom: 0;
   left: 0;

@@ -52,26 +52,34 @@ class Layout extends React.Component {
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
 
           <div className="questionboxwallrack">
-            <TextGridBox text="FINE.FINE.FINE." />
-            <TextGridBox text="FINE.FINE.FINE." />
-            <TextGridBox text="FINE.FINE.FINE." />
-            <TextGridBox text="FINE.FINE.FINE." />
-            <TextGridBox text="GOOD.GOOD.GOOD." />
-            <TextGridBox text="GOOD.GOOD.GOOD." />
-            <TextGridBox text="GOOD.GOOD.GOOD." />
-            <TextGridBox text="GOOD.GOOD.GOOD." />
-            <TextGridBox text="OK.OK.OK.OK.OK" />
-            <TextGridBox text="OK.OK.OK.OK.OK" />
-            <TextGridBox text="OK.OK.OK.OK.OK" />
-            <TextGridBox text="OK.OK.OK.OK.OK" />
-            <TextGridBox text="NOT BAD." />
-            <TextGridBox text="NOT BAD." />
-            <TextGridBox text="NOT BAD." />
-            <TextGridBox text="NOT BAD." />
-            <TextGridBox text="GitHub" />
-            <TextGridBox text={new Date().getMonth()} />
+            <TextGridBox text="MEN CAN" />
+            <TextGridBox text="SABOTAGE ME ALL" />
+            <TextGridBox text="THEY WANT, IT" />
+            <TextGridBox text="WON'T FIX THEIR" />
+            <TextGridBox text="MEDIOCRITY." />
+            <TextGridBox text="CHOOSE" />
+            <TextGridBox text="GOOD." />
+            <TextGridBox text="CHOOSE" />
+            <TextGridBox text="COOPERATION." />
+            <TextGridBox text="CHOOSE" />
+            <TextGridBox text="DOING" />
+            <TextGridBox text="YOUR BIT FOR" />
+            <TextGridBox text="OUR FUTURE." />
+            <TextGridBox text="CHOOSE" />
+            <TextGridBox text="FOCUSING" />
+            <TextGridBox text="YOUR ENERGY ON" />
+            <TextGridBox text="SELF" />
+            <TextGridBox text="IMPROVEMENT." />
+            <TextGridBox text="CHOOSE" />
+            <TextGridBox text="EARNING THE" />
+            <TextGridBox text="RIGHT TO CALL" />
+            <TextGridBox text="YOURSELF AN" />
+            <TextGridBox text="ENGINEER." />
+            <TextGridBox text="LEARN TO" />
+            <TextGridBox text="OVERCOME YOUR" />
+            <TextGridBox text="MEDIOCRITY." />
             <TextGridBox text={new Date().getUTCFullYear()} />
-            <TextGridBox text="100%" />
+            <TextGridBox text="GitHub" />
           </div>
         </div>
       </div>
