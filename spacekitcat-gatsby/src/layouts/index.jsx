@@ -20,7 +20,7 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
 
-    const boxes = generateBoxValues(100, 1).map(item => (<TextGridBox text={item} />));
+    const boxes = generateBoxValues(12, 1).map(item => (<TextGridBox key={item} text={item.toString()} />));
     this.state = { boxes };
   }
 
@@ -33,8 +33,8 @@ class Layout extends React.Component {
           renderer: {
             strategy: 'SinePhaseFrameRenderStrategy',
           },
-          framerate: 5,
-          rows: 100,
+          framerate: 3,
+          rows: 140,
         },
       ],
     };
@@ -64,10 +64,10 @@ class Layout extends React.Component {
         <div className="gel-wrap">
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
           <div className="questionboxwallrack">
-            <TextGridBox url="https://github.com/spacekitcat" />
-            <TextGridBox url="https://github.com/spacekitcat" />
-            <TextGridBox url="https://github.com/spacekitcat" />
-            <TextGridBox url="https://github.com/spacekitcat" />
+            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
+            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
+            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
+            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
             {this.state.boxes}
           </div>
         </div>

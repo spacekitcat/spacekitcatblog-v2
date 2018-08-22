@@ -22,16 +22,29 @@ describe('TextGridBox', () => {
       sut = shallow(<TextGridBox text="TOTES." />);
     });
 
-    it('should render the provided text', () => {
+    it('should render the placeholder text', () => {
       const textElement = sut.find('.questionboxlink');
 
-      expect(textElement.text()).toEqual('TOTES.');
+      expect(textElement.text()).toEqual('?');
     });
 
     it('should render the provided url as href', () => {
       const textElement = sut.find('.questionboxlink');
 
       expect(textElement.prop('href')).toEqual('#spacestation');
+    });
+
+    describe('and the button is clicked', () => {
+      beforeEach(() => {
+        const textElement = sut.find('.questionboxlink');
+        textElement.simulate('click');
+      });
+
+      it('should render the provided text', () => {
+        const textElement = sut.find('.questionboxlink');
+
+        expect(textElement.text()).toEqual('TOTES.');
+      });
     });
   });
 
@@ -41,7 +54,7 @@ describe('TextGridBox', () => {
       sut = shallow(<TextGridBox url={expectedHref} />);
     });
 
-    it('should render the exepcted text', () => {
+    it('should render the placeholder text', () => {
       const textElement = sut.find('.questionboxlink');
 
       expect(textElement.text()).toEqual('?');

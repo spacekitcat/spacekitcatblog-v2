@@ -1,16 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextGridBox = ({ text, url }) => (
-  <div className="questionbox">
-    <div className="questionboxcontent">
-      <a className="questionboxlink" href={url}>{text}</a>
-    </div>
-  </div>
-);
+class TextGridBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isFlipped: false };
+
+    this.flip = this.flip.bind(this);
+  }
+
+  getDisplayValue() {
+    const { isFlipped } = this.state;
+    const { text } = this.props;
+
+    if (isFlipped) {
+      return text;
+    }
+    return '?';
+  }
+
+  flip() {
+    this.setState(prevState => ({
+      isFlipped: !prevState.isFlipped,
+    }));
+  }
+
+  render() {
+    const { url } = this.props;
+    return (
+      <div className="questionbox">
+        <div className="questionboxcontent">
+          <a className="questionboxlink" href={url} onClick={this.flip}>{this.getDisplayValue()}</a>
+        </div>
+      </div>
+    );
+  }
+}
 
 TextGridBox.defaultProps = {
-  text: '?',
+  text: '',
   url: '#spacestation',
 };
 

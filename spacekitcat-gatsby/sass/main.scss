@@ -163,6 +163,10 @@ body {
   @include gel-columns(12);
 
   @include mq($from: gel-bp-m) {
+    @include gel-columns(1/2);
+  }
+
+  @include mq($from: gel-bp-l) {
     @include gel-columns(1/4);
   }
 
@@ -194,12 +198,10 @@ body {
 
     &:hover {
       color: $orange-contrast;
-
     }
 
     &:active {
       color: $orange-contrast;
-
     }
   }
 }

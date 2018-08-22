@@ -32,7 +32,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "jest tests/**",
-    "test-watch": "npx jest --watch",
+    "test-watch": "npx jest tests/** --watch",
     "start": "http-server ./public -p 3000"
   },
   "jest": {
