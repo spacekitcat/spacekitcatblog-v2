@@ -76,13 +76,13 @@ body {
 
 @keyframes hts-anim {
   0% {top: -$gel-spacing-unit; left: -$gel-spacing-unit; display: inline;}
-  50% {top: 100px; left: 100; color:  purple; display: none;}
+  50% {top: 20px; left: 0; color:  purple; display: none;}
   100% {top: 0px; left: 0; color:  rgba(green, 0.1f); display: none;}
 }
 
 .hackertext::after {
-  content: "Misogynists can die in a fire, am I right Donny?";
-  animation: hts-anim 4s alternate both running;
+  content: "Memory Test  :    786432K OK";
+  animation: hts-anim 2s alternate both running;
   background-color: rgba($black, 0.7);
   bottom: 0;
   left: 0;
@@ -169,7 +169,7 @@ body {
   position: relative;
   color: $orange;
   text-align: center;
-  animation: tellme 2s infinite;
+  animation: tellme 1s infinite;
   animation-iteration-count: 1;
   vertical-align: middle;
   margin-bottom: double($gel-spacing-unit);

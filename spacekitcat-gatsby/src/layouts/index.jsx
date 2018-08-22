@@ -64,6 +64,10 @@ class Layout extends React.Component {
         <div className="gel-wrap">
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
           <div className="questionboxwallrack">
+            <TextGridBox url="https://github.com/spacekitcat" />
+            <TextGridBox url="https://github.com/spacekitcat" />
+            <TextGridBox url="https://github.com/spacekitcat" />
+            <TextGridBox url="https://github.com/spacekitcat" />
             {this.state.boxes}
           </div>
         </div>
