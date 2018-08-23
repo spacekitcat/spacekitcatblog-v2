@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "spacekitcat-blog-gatsby",
+  "description": "spacekitcat gatsby spacestation",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Lisa Burton <0lisaburton@gmail.com>",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
@@ -23,7 +23,6 @@
     "serve-favicon": "^2.5.0"
   },
   "keywords": [
-    "gatsby"
   ],
   "license": "MIT",
   "scripts": {
@@ -70,6 +69,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "http://spacekitcat.com"
   }
 }

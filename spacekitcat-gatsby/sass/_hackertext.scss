@@ -34,13 +34,13 @@
   }
   
   @keyframes hts-anim {
-    0% {top: -$gel-spacing-unit; left: -$gel-spacing-unit; display: inline;}
-    50% {top: 20px; left: 0; color:  purple; display: none;}
-    100% {top: 0px; left: 0; color:  rgba(green, 0.1f); display: none;}
+    @for $i from 1 through 90 {
+      #{$i * 1%} { content: "Memory Test  : #{$i * 1622339} ..."; }
+    }
   }
   
   .hackertext::after {
-    content: "Memory Test  :    786432K OK";
+    content: "Memory Test  : #{90 * 1622339} OK";
     animation: hts-anim 2s alternate both running;
     background-color: rgba($black, 0.7);
     bottom: 0;
