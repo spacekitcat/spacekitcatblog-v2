@@ -27,9 +27,9 @@ class TextGridBox extends React.Component {
   }
 
   render() {
-    const { url, externalref } = this.props;
+    const { url, externalref, className } = this.props;
     return (
-      <div className="questionbox">
+      <div className={className}>
         <div className="questionboxcontent">
           <a className="questionboxlink" href={url} onClick={this.flip}>{this.getDisplayValue()}</a>
           { externalref
@@ -45,6 +45,7 @@ TextGridBox.defaultProps = {
   url: '#spacestation',
   externalref: false,
   revealedByDefault: false,
+  className: '',
 };
 
 TextGridBox.propTypes = {
@@ -52,6 +53,7 @@ TextGridBox.propTypes = {
   url: PropTypes.string,
   externalref: PropTypes.bool,
   revealedByDefault: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default TextGridBox;

@@ -18,8 +18,13 @@ describe('TextGridBox', () => {
   });
 
   describe('the text prop is provided', () => {
+    const expectedClassName = 'className';
     beforeEach(() => {
-      sut = shallow(<TextGridBox text="LIES." />);
+      sut = shallow(<TextGridBox className={expectedClassName} text="LIES." />);
+    });
+
+    it('should set the className prop', () => {
+      expect(sut.props().className).toEqual('className');
     });
 
     it('should render the placeholder text', () => {

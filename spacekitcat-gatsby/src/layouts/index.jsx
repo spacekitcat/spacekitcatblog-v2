@@ -7,10 +7,10 @@ import Header from '../components/header';
 import TextGridBox from '../components/text-grid-box';
 import '../../sass/main.scss';
 
-const generateBoxValues = (boxCount, denomination) => {
+const generateBoxValues = (from, to, denomination) => {
   const values = [];
-  for (let i = 0; i < boxCount; i += 1) {
-    values[i] = i * denomination;
+  for (let i = from; i < to; i += 1) {
+    values.push(i * denomination);
   }
 
   return shuffle(values);
@@ -20,24 +20,12 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
 
-    const boxes = generateBoxValues(11, 1).map(item => (<TextGridBox key={item} text={item.toString()} />));
+    const boxes = generateBoxValues(5, 20, 1).map(item => (<TextGridBox key={item} text={item.toString()} className={`box${item.toString()}`} />));
     this.state = { boxes };
   }
 
   componentDidMount() {
-    window.hacker_text_config = {
-      targets: [
-        {
-          htmlId: 'hackertext',
-          text: 'Feelin',
-          renderer: {
-            strategy: 'SinePhaseFrameRenderStrategy',
-          },
-          framerate: 3,
-          rows: 140,
-        },
-      ],
-    };
+
   }
 
   render() {
@@ -64,15 +52,15 @@ class Layout extends React.Component {
         <div className="gel-wrap">
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
           <div className="questionboxwallrack">
-            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
-            <div className="questionbox">
+            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" className="box0" />
+            <div className="box1">
               <div className="questionboxcontent">
                 <iframe width="100%" height="100%" title="Arcade unit 2701" src="https://www.youtube.com/embed/WiWiTXq4yYY?autoplay=1&mute=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
               </div>
             </div>
-            <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault />
-            <TextGridBox key="A2718" text="A2718" url="/A2718/" revealedByDefault />
-            <TextGridBox key="spacekitcat" text="spacekitcat()" url="/" revealedByDefault />
+            <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault className="box2" />
+            <TextGridBox key="A2718" text="A2718" url="/A2718/" revealedByDefault className="box3" />
+            <TextGridBox key="spacekitcat" text="spacekitcat()" url="/" revealedByDefault className="box4" />
             {this.state.boxes}
           </div>
           {this.props.children()}

@@ -6,32 +6,32 @@
     }
   }
 }
+@for $i from 0 through 20 {
+  #{'.box' + $i} {
 
-.questionbox {
+      @include gel-layout-item;
+      @include gel-columns(12);
 
-    @include gel-layout-item;
-    @include gel-columns(12);
+      @include mq($from: gel-bp-m) {
+        @include gel-columns(1/2);
+      }
+    
+      @include mq($from: gel-bp-l) {
+        @include gel-columns(1/4);
+      }
+    
+      animation: tellme 1s infinite;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
 
-    @include mq($from: gel-bp-m) {
-      @include gel-columns(1/2);
-    }
-  
-    @include mq($from: gel-bp-l) {
-      @include gel-columns(1/4);
-    }
-  
-    animation: tellme 1s infinite;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
+      position: relative;
+      color: $orange;
+      text-align: center;
 
-    position: relative;
-    color: $orange;
-    text-align: center;
-
-    vertical-align: middle;
-    margin-bottom: double($gel-spacing-unit);
+      vertical-align: middle;
+      margin-bottom: double($gel-spacing-unit);
+  }
 }
-
 .questionboxcontent {
     position: relative;
 

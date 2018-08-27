@@ -2,11 +2,24 @@ import React from 'react';
 
 class A2618 extends React.Component {
   componentDidMount() {
+    window.hacker_text_config = {
+      targets: [
+        {
+          htmlId: 'hackertext',
+          text: 'A2618_',
+          renderer: {
+            strategy: 'SinePhaseFrameRenderStrategy',
+          },
+          framerate: 3,
+          rows: 140,
+        },
+      ],
+    };
   }
 
   render() {
     return (
-      <div><p>hello.</p></div>
+      <div><h1>PROJECT.A2618</h1></div>
     );
   }
 }
