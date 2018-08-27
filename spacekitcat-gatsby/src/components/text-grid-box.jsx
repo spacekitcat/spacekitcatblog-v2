@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import GatsbyLink from 'gatsby-link';
 
 class TextGridBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isFlipped: false };
+    this.state = { isFlipped: props.revealedByDefault };
 
     this.flip = this.flip.bind(this);
   }
@@ -26,11 +27,13 @@ class TextGridBox extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
+    const { url, externalref } = this.props;
     return (
       <div className="questionbox">
         <div className="questionboxcontent">
           <a className="questionboxlink" href={url} onClick={this.flip}>{this.getDisplayValue()}</a>
+          { externalref
+          && <GatsbyLink to={url}>{this.getDisplayValue()}</GatsbyLink> }
         </div>
       </div>
     );
@@ -40,11 +43,15 @@ class TextGridBox extends React.Component {
 TextGridBox.defaultProps = {
   text: '',
   url: '#spacestation',
+  externalref: false,
+  revealedByDefault: false,
 };
 
 TextGridBox.propTypes = {
   text: PropTypes.string,
   url: PropTypes.string,
+  externalref: PropTypes.bool,
+  revealedByDefault: PropTypes.bool,
 };
 
 export default TextGridBox;

@@ -6,7 +6,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div />
+      <div><p>hello</p></div>
     );
   }
 }

@@ -20,7 +20,7 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
 
-    const boxes = generateBoxValues(12, 1).map(item => (<TextGridBox key={item} text={item.toString()} />));
+    const boxes = generateBoxValues(11, 1).map(item => (<TextGridBox key={item} text={item.toString()} />));
     this.state = { boxes };
   }
 
@@ -53,8 +53,8 @@ class Layout extends React.Component {
             },
           ]}
         >
-          <script src="jquery.min.js" />
-          <script src="hackertext.js" />
+          <script src="/jquery.min.js" />
+          <script src="/hackertext.js" />
         </Helmet>
         <div className="hackertext-isolation-container">
           <div className="hackertext-background">
@@ -65,15 +65,17 @@ class Layout extends React.Component {
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
           <div className="questionboxwallrack">
             <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
-            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
             <div className="questionbox">
               <div className="questionboxcontent">
                 <iframe width="100%" height="100%" title="Arcade unit 2701" src="https://www.youtube.com/embed/WiWiTXq4yYY?autoplay=1&mute=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
               </div>
             </div>
-            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" />
+            <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault />
+            <TextGridBox key="A2718" text="A2718" url="/A2718/" revealedByDefault />
+            <TextGridBox key="spacekitcat" text="spacekitcat()" url="/" revealedByDefault />
             {this.state.boxes}
           </div>
+          {this.props.children()}
         </div>
       </div>
     );

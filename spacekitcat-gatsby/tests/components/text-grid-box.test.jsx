@@ -19,7 +19,7 @@ describe('TextGridBox', () => {
 
   describe('the text prop is provided', () => {
     beforeEach(() => {
-      sut = shallow(<TextGridBox text="TOTES." />);
+      sut = shallow(<TextGridBox text="LIES." />);
     });
 
     it('should render the placeholder text', () => {
@@ -28,23 +28,22 @@ describe('TextGridBox', () => {
       expect(textElement.text()).toEqual('?');
     });
 
+    describe('and the revealedByDefault prop is provided', () => {
+      beforeEach(() => {
+        sut = shallow(<TextGridBox text="LIES." revealedByDefault />);
+      });
+
+      it('should render the placeholder text', () => {
+        const textElement = sut.find('.questionboxlink');
+
+        expect(textElement.text()).toEqual('LIES.');
+      });
+    });
+
     it('should render the provided url as href', () => {
       const textElement = sut.find('.questionboxlink');
 
       expect(textElement.prop('href')).toEqual('#spacestation');
-    });
-
-    describe('and the button is clicked', () => {
-      beforeEach(() => {
-        const textElement = sut.find('.questionboxlink');
-        textElement.simulate('click');
-      });
-
-      it('should render the provided text', () => {
-        const textElement = sut.find('.questionboxlink');
-
-        expect(textElement.text()).toEqual('TOTES.');
-      });
     });
   });
 
@@ -64,6 +63,38 @@ describe('TextGridBox', () => {
       const textElement = sut.find('.questionboxlink');
 
       expect(textElement.prop('href')).toEqual(expectedHref);
+    });
+
+    describe('the externalref prop is true', () => {
+      const expectedText = 'LIES.';
+      beforeEach(() => {
+        sut = shallow(<TextGridBox text={expectedText} url={expectedHref} externalref />);
+      });
+
+      it('should render the placeholder text', () => {
+        const textElement = sut.find('GatsbyLink');
+
+        expect(textElement.prop('children')).toEqual('?');
+      });
+
+      describe('and the button is clicked', () => {
+        beforeEach(() => {
+          const textElement = sut.find('.questionboxlink');
+          textElement.simulate('click');
+        });
+
+        it('should render the provided text', () => {
+          const textElement = sut.find('.questionboxlink');
+
+          expect(textElement.text()).toEqual('LIES.');
+        });
+      });
+
+      it('should render the provided url as href', () => {
+        const textElement = sut.find('GatsbyLink');
+
+        expect(textElement.prop('to')).toEqual(expectedHref);
+      });
     });
   });
 });

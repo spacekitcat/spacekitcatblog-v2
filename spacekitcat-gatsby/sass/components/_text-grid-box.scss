@@ -1,8 +1,8 @@
 @keyframes tellme {
-  @for $i from 1 through 20 {
+  @for $i from 1 through 1 {
     #{$i * 1%} {
       color: $orange-contrast; 
-      transform: rotate3d(1 , 0, 0, #{$i * 0.1 * -3.142}rad);
+      transform: rotate3d(1 , 0, 0, #{14}rad);
     }
   }
 }
@@ -21,7 +21,7 @@
     }
   
     animation: tellme 1s infinite;
-    animation-delay: 2s;
+    animation-delay: 0s;
     animation-iteration-count: 1;
 
     position: relative;
