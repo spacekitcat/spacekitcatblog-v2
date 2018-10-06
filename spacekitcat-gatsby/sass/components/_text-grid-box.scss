@@ -2,7 +2,7 @@
   @for $i from 1 through 1 {
     #{$i * 1%} {
       color: $orange-contrast; 
-      transform: rotate3d(1 , 0, 0, #{14}rad);
+      transform: rotate3d(1 , 0, 0, #{5}rad);
     }
   }
 }
@@ -20,7 +20,7 @@
         @include gel-columns(1/4);
       }
     
-      animation: tellme 1s infinite;
+      animation: tellme 0.2s infinite;
       animation-delay: 0s;
       animation-iteration-count: 1;
 

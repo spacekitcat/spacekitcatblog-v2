@@ -12,6 +12,7 @@ $gel-type-enable--font-family: true;
 @import 'hackertext';
 @import 'notfound';
 @import 'components/text-grid-box';
+@import 'unicode-table';
 
 // Google imports
 @import url('https://fonts.googleapis.com/css?family=Monoton|VT323|Source+Code+Pro');
@@ -42,25 +43,39 @@ body {
   padding-top: 0;
 }
 
-.sitename {
-  position: relative;
-  color: $green;
-}
 
 @keyframes cool {
-  0% {top: 0px; left:0px; color: blue;}
-  75% {top: -3px; left: 3px; color: blue; z-index: -2;}
+  0% {top: -24px; left: 0px; color: red; z-index: 2;}
+  25% {top: -20px; left:0px; color: red;}
+  50% {top: -16px; left:0px; color: red;}
+  100% {top: 0px; left:0px; color: white;}
 }
 
 @keyframes cool2 {
-  25% {top: 0px; left:0px; color: red;}
-  100% {top: 3px; left: 0; color: red; z-index: -1;}
+  0% {top: 24px; left: 0; color: blue; z-index: 2;}
+  25% {top: 20px; left:0px; color: blue;}
+  50% {top: 16px; left:0px; color: blue;}
+  100% {top: 0px; left:0px; color: white;}
+}
+
+@keyframes main-logo-anim {
+  0% {color: black}
+  100% {color: green}
+}
+
+.sitename {
+  position: relative;
+  color: $green;
+
+  animation: main-logo-anim 1s running;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
 }
 
 .sitename::before {
   position: absolute;
   color: $green;
-  animation: cool 0.15s running;
+  animation: cool 1s running;
   animation-delay: 0s;
   animation-iteration-count: 1;
   content: 'SPACEKITCAT';
@@ -76,7 +91,7 @@ body {
 .sitename::after {
   position: absolute;
   color: $green;
-  animation: cool2 0.5s running;
+  animation: cool2 1s running;
   animation-delay: 0s;
   animation-iteration-count: 1;
   content: 'SPACEKITCAT';

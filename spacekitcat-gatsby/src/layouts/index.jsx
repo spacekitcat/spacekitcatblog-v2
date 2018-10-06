@@ -52,16 +52,10 @@ class Layout extends React.Component {
         <div className="gel-wrap">
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
           <div className="questionboxwallrack">
-            <TextGridBox url="https://github.com/spacekitcat" text="GitHub" className="box0" />
-            <div className="box1">
-              <div className="questionboxcontent">
-                <iframe width="100%" height="100%" title="Arcade unit 2701" src="https://www.youtube.com/embed/WiWiTXq4yYY?autoplay=1&mute=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
-              </div>
-            </div>
+            <TextGridBox url="https://github.com/spacekitcat" revealedByDefault text="GitHub" className="box0" />
             <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault className="box2" />
-            <TextGridBox key="A2718" text="A2718" url="/A2718/" revealedByDefault className="box3" />
-            <TextGridBox key="spacekitcat" text="spacekitcat()" url="/" revealedByDefault className="box4" />
-            {this.state.boxes}
+            <TextGridBox key="A2718" text="A2718" url="/A2719/" revealedByDefault className="box3" />
+            <TextGridBox key="Unicode table" text="Unicode table" url="/unicode-table/" revealedByDefault className="box4" />
           </div>
           {this.props.children()}
         </div>

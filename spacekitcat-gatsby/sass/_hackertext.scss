@@ -36,7 +36,7 @@
   @keyframes hts-anim {
     @for $i from 1 through 90 {
       #{$i * 1%} { content: "Memory Test  : #{$i * 1622339} ..."; }
-    }
+    };
   }
   
   .hackertext::after {

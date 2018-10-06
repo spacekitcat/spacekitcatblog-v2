@@ -1,0 +1,39 @@
+.toggle__container {
+    @include gel-layout-item;
+    @include gel-columns(12);
+
+    width: 100%;
+    height: 25px;
+}
+
+.toggle__button {
+    display: block;
+}
+
+.popup__text {
+    margin:0;
+    padding:0;
+}
+
+.popup__container {
+    width: 320px;
+    height: 120px;
+    box-sizing: border-box;
+    background-color: white;
+    padding: double($gel-spacing-unit);
+    @include gel-typography('trafalgar-bold');
+}
+
+.popup__container--show {
+    display: inline-block;
+}
+
+.popup__container--hide {
+    display: none;
+}
+
+.popup__button {
+    color: transparent;
+    outline-color: white;
+}
+
