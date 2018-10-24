@@ -22,7 +22,7 @@ class UnicodeTable extends React.Component {
       <div className="snake__container">
         <h1>SNAKE -SNAKE +SNAKE +SNAKE</h1>
         <h1>SNAKE -SNAKE +SNAKE +SNAKE</h1>
-        <h1>SNAKE --SNAKE +SNAKE ++SNAKE</h1>
+        <h1>SNAKE--SNAKE +SNAKE++SNAKE</h1>
       </div>
     );
   }
