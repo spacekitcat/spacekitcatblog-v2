@@ -1,5 +1,5 @@
 .unicode-table__container {
-    background-color: rgba(255, 255, 255, 200);
+    background-color: $corner-shop-trans-brew;
     box-sizing: border-box;
     padding: $gel-spacing-unit;
 }
@@ -20,9 +20,9 @@
     }
 }
 
-.unicode-table__conversion-table-container {
-    border-style: dashed none none dashed;
-    border-width: 2px;
+.unicode-table__conversion-table-layout {
+    @include gel-layout;
+
     display: inline-block;
 }
 
@@ -46,7 +46,43 @@
     }
 }
 
+@keyframes expand-in {
+    0% {
+        background-color: hotpink;
+        top: quad($gel-spacing-unit);
+        bottom: quad($gel-spacing-unit);
+        left: quad($gel-spacing-unit);
+        right: quad($gel-spacing-unit);
+    }
+
+    45% {
+        background-color: white;
+        top: $gel-spacing-unit;
+        bottom: $gel-spacing-unit;
+        left: $gel-spacing-unit;
+        right: $gel-spacing-unit;
+    }
+
+    90% {
+        background-color: hotpink;
+        top: 0;
+        bottom: double(-$gel-spacing-unit);
+        left: double(-$gel-spacing-unit);
+        right: double(-$gel-spacing-unit);
+    }
+
+    100% {
+        background-color: hotpink;
+        top: 0;
+        bottom: triple(-$gel-spacing-unit);
+        left: triple(-$gel-spacing-unit);
+        right: triple(-$gel-spacing-unit);
+    }
+}
+
 .unicode-table__conversion-item {
+    @include gel-layout-item;
+
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -55,7 +91,7 @@
     height: 7 * $gel-spacing-unit;
     overflow:none;
     text-align: center;
-    border-style: none dashed dashed none;
+    z-index: 1;
     border-width: 2px;
 
     > p {
@@ -76,5 +112,20 @@
         color: $orange-contrast;
         border-color: $green;
         transition: background-color 0.25s ease;
+        font-size: 32px;
+        z-index: 2;
+        top: 0;
+
+        &::before {
+            animation: expand-in 0.25s ease-in;
+            position: absolute;
+            z-index: -1;
+            content: '';
+            background-color: hotpink;
+            top: 0;
+            bottom: triple(-$gel-spacing-unit);
+            left: triple(-$gel-spacing-unit);
+            right: triple(-$gel-spacing-unit);
+        }
     }
 }

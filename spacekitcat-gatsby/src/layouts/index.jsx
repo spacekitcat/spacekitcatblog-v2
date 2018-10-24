@@ -51,11 +51,12 @@ class Layout extends React.Component {
         </div>
         <div className="gel-wrap">
           <Header siteTitle={this.props.data.site.siteMetadata.title} />
-          <div className="questionboxwallrack">
+          <div className="projects__layout">
             <TextGridBox url="https://github.com/spacekitcat" revealedByDefault text="GitHub" className="box0" />
             <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault className="box2" />
             <TextGridBox key="A2718" text="A2718" url="/A2719/" revealedByDefault className="box3" />
             <TextGridBox key="Unicode table" text="Unicode table" url="/unicode-table/" revealedByDefault className="box4" />
+            <TextGridBox key="snake" text="snake" url="/snake/" revealedByDefault className="box5" />
           </div>
           {this.props.children()}
         </div>

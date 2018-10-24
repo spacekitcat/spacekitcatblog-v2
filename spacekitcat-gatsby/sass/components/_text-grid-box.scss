@@ -17,7 +17,7 @@
       }
     
       @include mq($from: gel-bp-l) {
-        @include gel-columns(1/4);
+        @include gel-columns(1/5);
       }
     
       animation: tellme 0.2s infinite;
@@ -35,21 +35,20 @@
 .questionboxcontent {
     position: relative;
 
-    background-color: rgba($green, 0.1);
-    height: 100px;
+    background-color: rgba($green, 0.2);
+    height: 50px;
     box-sizing: border-box;
 
     > a {
       display: block;
-      @include gel-typography('trafalgar-bold');
+      @include gel-typography('great-primer');
       color: $orange;
       line-height: 22px;
       letter-spacing: 2px;
       font-family: 'VT323', monospace;
-      font-size: 2px;
       padding-bottom: 0;
       margin: 0;
-      padding-top: 32px;
+      padding-top: 15px;
       text-decoration: none;
   
       &:hover {

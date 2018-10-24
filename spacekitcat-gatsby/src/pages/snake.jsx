@@ -47,15 +47,8 @@ class UnicodeTable extends React.Component {
     const { unicodeTable } = this.state;
 
     return (
-      <div className="unicode-table__conversion-table-layout">
-        <div className="unicode-table__conversion-table-container">
-          {unicodeTable.map((item, idx) => (
-            <div className="unicode-table__conversion-item gel-layout-item gel-1/12" key={item.UnicodeCode} tabIndex="0">
-              <p className="unicode-table__Unicode-string">{!item.UnicodeRepresentation ? '??' : item.UnicodeRepresentation}</p>
-              <p className="unicode-table__Unicode-code">{item.UnicodeCode}</p>
-            </div>
-          ))}
-        </div>
+      <div className="unicode-table__container gel-layout">
+        SNAKE -SNAKE +SNAKE +SNAKE; SNAKE -SNAKE +SNAKE +SNAKE; +SNAKE --SNAKE +SNAKE ++SNAKE
       </div>
     );
   }
