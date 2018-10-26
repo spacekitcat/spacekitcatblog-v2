@@ -1,0 +1,48 @@
+.snake__sprite {
+    position: fixed;
+    background-color: hotpink;
+    box-sizing: border-box;
+    width: 2%;
+    height: 2%;
+    border-radius: 4px;
+}
+
+@for $i from 0 through 100 {
+    @for $j from 0 through 100 {
+        .snake__sprite--x#{$i}y#{$j} { left: #{$i}#{'%'}; top: #{$j}#{'%'}; }
+        .snake__sprite--x#{$i}y#{$j}::before
+        {
+            position: absolute;
+            color: yellow;
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            font-size: 14px;
+            margin-left: 44%;
+        }
+    };
+};
+
+@for $i from 0 through 100 {
+    .snake__sprite--number#{$i} {
+        position: fixed;
+        background-color: hotpink;
+        box-sizing: border-box;
+        width: 2%;
+        height: 2%;
+        border-radius: 4px;
+    }
+
+    .snake__sprite--number#{$i}::before
+    {
+        position: absolute;
+        content: '#{$i}';
+        color: yellow;
+        top:0;
+        bottom:0;
+        left:0;
+        text-align: left;
+        font-size: 16px;
+    }
+};

@@ -56,7 +56,7 @@ class Layout extends React.Component {
             <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault className="box2" />
             <TextGridBox key="A2718" text="A2718" url="/A2719/" revealedByDefault className="box3" />
             <TextGridBox key="Unicode table" text="Unicode table" url="/unicode-table/" revealedByDefault className="box4" />
-            <TextGridBox key="snake" text="snake" url="/snake/" revealedByDefault className="box5" />
+            <TextGridBox key="snake" text="gambling" url="/snake/" revealedByDefault className="box5" />
           </div>
           {this.props.children()}
         </div>
