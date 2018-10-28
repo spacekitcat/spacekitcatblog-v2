@@ -1,21 +1,52 @@
 import React from 'react';
+import sortBy from 'lodash/sortBy';
 
 const getPositionClass = position => `snake__sprite snake__sprite--x${position.x}y${position.y}`;
 
+let numberCounter = 0;
 const generateRandomPosition = () => {
-  const x = Math.round(Math.random() * 100);
-  const y = Math.round(Math.random() * 100);
-  return { x, y };
+  const x = Math.ceil((Math.round(Math.random() * 1264)) / 20) * 20;
+  const y = Math.ceil((Math.round(Math.random() * 400)) / 20) * 20;
+  return { position: { x, y }, number: numberCounter++ };
 };
 
+let stateVisibilityCounterRegister = true;
 const renderSnakes = (snakeState) => {
   let i = 0;
+  let statclass = 'snake__environment-stats';
+  if (!stateVisibilityCounterRegister) {
+    statclass += ' snake__environment-stats--hidden';
+  }
+  stateVisibilityCounterRegister = !stateVisibilityCounterRegister;
+
   const snakes = snakeState.map(state => (
     <div className="snake__container" key={i}>
-      <div className={`${getPositionClass(state.position)} snake__sprite--number${i++}`} key={i++} />
+      <div className={`${getPositionClass(state.position)} snake__sprite--number${i}`} key={i++} />
     </div>
   ));
-  return (<div className="snake__environment-container">{snakes}</div>);
+  return (
+    <div className="snake__environment-wrapper">
+      <div className="snake__environment-wrongscreensize">
+        <h1>Your browser isn't wide enough for this jelly.</h1>
+        <h3>The width should be at least 1280px, i.e. Desktop, extra wide tablet etc.</h3>
+        <p>This is an experimental project prototype space for probability based games.</p>
+        <p>The nature of prototyping allows for this to have very minimal thought towards interoperability.</p>
+
+      </div>
+      <div className="snake__environment-container">
+        <div className={statclass}>
+          {snakeState[0].position
+          && `${sortBy(snakeState, o => o.position.x)[snakeState.length - 1].number} IS WINNING THE SPACE RACE`
+        }
+        </div>
+        <div className="snake__environmentstartlineleft">START</div>
+        <div className="snake__environmentfinishline">FINISH</div>
+        {snakes}
+        <div className="snake__environmentstartlineright">START</div>
+        <div className="snake__environmentfinishlinebottom">FINISH</div>
+      </div>
+    </div>
+  );
 };
 
 class Snake extends React.Component {
@@ -23,13 +54,11 @@ class Snake extends React.Component {
     super(props);
 
     const snakes = [];
-    for (let i = 0; i < 30; ++i) {
-      snakes.push({
-        position: generateRandomPosition(),
-      });
+    for (let i = 0; i < 6; ++i) {
+      snakes.push(generateRandomPosition());
     }
 
-    console.log(snakes);
+    // console.log(snakes);
 
     this.state = { snakes };
   }
@@ -45,10 +74,11 @@ class Snake extends React.Component {
   render() {
     const { snakes } = this.state;
 
+
     snakes.forEach((item) => {
       const { position } = item;
-      position.x += 2;
-      if (position.x > 100 - 1) {
+      position.x += 20 * Math.round(Math.random() * 3);
+      if (position.x > 1200) {
         position.x = 0;
       }
     });
