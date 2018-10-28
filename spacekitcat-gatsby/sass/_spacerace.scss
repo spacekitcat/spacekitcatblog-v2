@@ -3,14 +3,14 @@ $container-width: 1260;
 $snake-width: 48px;
 $snake-height: 16px;
 
-.snake__environment-wrongscreensize {
+.spacerace__environment-wrongscreensize {
     display: block;
     @include mq($from: gel-bp-xxl) {
         display: none;
     }
 }
 
-.snake__environment-container {
+.spacerace__environment-container {
     @include gel-layout;
 
     display: none;
@@ -53,7 +53,7 @@ $snake-height: 16px;
     }
 }
 
-.snake__environmentstartlineleft {
+.spacerace__environmentstartlineleft {
     color: black;
     transform: rotate(90deg);
     position: absolute;
@@ -62,7 +62,7 @@ $snake-height: 16px;
     left: 22px;
 }
 
-.snake__environmentstartlineright {
+.spacerace__environmentstartlineright {
     color: black;
     transform: rotate(90deg);
     position: absolute;
@@ -71,7 +71,7 @@ $snake-height: 16px;
     left: 22px;
 }
 
-.snake__environmentfinishline {
+.spacerace__environmentfinishline {
     color: black;
     transform: rotate(90deg);
     position: absolute;
@@ -80,7 +80,7 @@ $snake-height: 16px;
     right: 16px;
 }
 
-.snake__environmentfinishlinebottom {
+.spacerace__environmentfinishlinebottom {
     color: black;
     transform: rotate(90deg);
     position: absolute;
@@ -92,13 +92,11 @@ $snake-height: 16px;
 .spacerace__sprite {
     position: absolute;   
     box-sizing: border-box;
-    height: 2%;
-    width: 2%;
     border-radius: 4px;
     z-index: 5;
 }
 
-.snake__environment-stats {
+.spacerace__environment-stats {
     background-color: white;
     color: black;    
     position: relative;
@@ -108,7 +106,7 @@ $snake-height: 16px;
     text-align: center;
 }
 
-.snake__environment-stats--alt {
+.spacerace__environment-stats--alt {
     background-color: black;
     color: white;  }
 
@@ -145,10 +143,10 @@ $l-max: 90;
     .spacerace__sprite--number#{$i} {
         animation: hyperShift ease-in 1s;
         background-color: hsl(random(360),$s-min+random($s-max+-$s-min),$l-min+random($l-max+-$l-min));
+        clip-path: polygon(0 0, 0 64px, 32px 0);
         box-sizing: border-box;
         width: $snake-width;
         height: $snake-height;
-        border-radius: 4px;
     }
 
     .spacerace__sprite--number#{$i}::before
@@ -162,6 +160,6 @@ $l-max: 90;
         left:0;
         text-align: left;
         font-size: 16px;
-        margin-left: 40%;
+        margin-left: 2px;
     }
 };

@@ -108,8 +108,6 @@ body {
   @include gel-layout;
   perspective: 1000px;
   background-color: $corner-shop-trans-brew;
-  padding-top: $gel-spacing-unit;
-  padding-right: double($gel-spacing-unit);
 }
 
 .column-wrapper {
