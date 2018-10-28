@@ -26,7 +26,6 @@ class A2618 extends React.Component {
       ],
     };
 
-
     let charsReceived = '';
     fetch(gitHubApiUrl).then((response) => {
       const reader = response.body.getReader();
@@ -45,13 +44,6 @@ class A2618 extends React.Component {
 
         return reader.read().then(processText);
       });
-
-      // ().then((response) => {
-      //  console.log(response.read());
-      // });
-      // response.forEach((item) => {
-      //   console.log(item);
-      // });
     }).catch((err) => {
       console.log(err);
     });

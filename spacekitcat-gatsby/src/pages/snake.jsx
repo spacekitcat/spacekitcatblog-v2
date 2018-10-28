@@ -5,8 +5,8 @@ const getPositionClass = position => `snake__sprite snake__sprite--x${position.x
 
 let numberCounter = 0;
 const generateRandomPosition = () => {
-  const x = Math.ceil((Math.round(Math.random() * 1264)) / 20) * 20;
-  const y = Math.ceil((Math.round(Math.random() * 400)) / 20) * 20;
+  const x = Math.ceil((Math.round(Math.random() * 1200)) / 20) * 20;
+  const y = Math.ceil((Math.round(Math.random() * 350)) / 20) * 20;
   return { position: { x, y }, number: numberCounter++ };
 };
 
@@ -15,7 +15,7 @@ const renderSnakes = (snakeState) => {
   let i = 0;
   let statclass = 'snake__environment-stats';
   if (!stateVisibilityCounterRegister) {
-    statclass += ' snake__environment-stats--hidden';
+    statclass += ' snake__environment-stats--alt';
   }
   stateVisibilityCounterRegister = !stateVisibilityCounterRegister;
 
@@ -27,7 +27,7 @@ const renderSnakes = (snakeState) => {
   return (
     <div className="snake__environment-wrapper">
       <div className="snake__environment-wrongscreensize">
-        <h1>Your browser isn't wide enough for this jelly.</h1>
+        <h1>Your browser isn&#39;t wide enough for this jelly.</h1>
         <h3>The width should be at least 1280px, i.e. Desktop, extra wide tablet etc.</h3>
         <p>This is an experimental project prototype space for probability based games.</p>
         <p>The nature of prototyping allows for this to have very minimal thought towards interoperability.</p>
@@ -54,11 +54,9 @@ class Snake extends React.Component {
     super(props);
 
     const snakes = [];
-    for (let i = 0; i < 6; ++i) {
+    for (let i = 0; i < 16; i += 1) {
       snakes.push(generateRandomPosition());
     }
-
-    // console.log(snakes);
 
     this.state = { snakes };
   }

@@ -33,9 +33,9 @@ $snake-height: 16px;
         bottom: 48px;
         left: 32px;
         width:10px;
-        background-color: green;
-        border-color: white;
-        border-width: 5px;
+        background-color: yellow;
+        border-color: black;
+        border-width: 2px;
         border-style: dashed;
     }
 
@@ -46,10 +46,10 @@ $snake-height: 16px;
         bottom: 48px;
         right: 30px;
         width:10px;
-        background-color: black;
-        border-color: white;
+        background-color: yellow;
+        border-color: black;
         border-width: 5px;
-        border-style: dashed;
+        border-style: double;
     }
 }
 
@@ -99,14 +99,18 @@ $snake-height: 16px;
 }
 
 .snake__environment-stats {
+    background-color: white;
+    color: black;    
     position: relative;
-    left: 64px;
+    left: 200px;
     top: 24px;
+    width:250px;
+    text-align: center;
 }
 
-.snake__environment-stats--hidden {
-    display: none;
-}
+.snake__environment-stats--alt {
+    background-color: black;
+    color: white;  }
 
 $resolution: 20;
 $i: $container-width;
