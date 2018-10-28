@@ -29,10 +29,10 @@ const Layout = props => (
     <div className="gel-wrap">
       <Header siteTitle={props.data.site.siteMetadata.title} />
       <div className="projects__layout">
-        <TextGridBox url="https://github.com/spacekitcat" revealedByDefault text="GitHub" className="box0" />
+        <TextGridBox url="https://github.com/spacekitcat" revealedByDefault text="GITHUB" className="box0" />
         <TextGridBox key="hackertextjs" text="HACKERTEXT.JS" url="/hackertextjs/" revealedByDefault className="box3" />
-        <TextGridBox key="Unicode table" text="Unicode table" url="/unicode-table/" revealedByDefault className="box4" />
-        <TextGridBox key="snake" text="gambling" url="/snake/" revealedByDefault className="box5" />
+        <TextGridBox key="Unicode table" text="UNICODE" url="/unicode-table/" revealedByDefault className="box4" />
+        <TextGridBox key="spacerace" text="SPACE RACE" url="/spacerace/" revealedByDefault className="box5" />
       </div>
       {props.children()}
     </div>

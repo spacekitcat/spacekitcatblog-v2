@@ -1,7 +1,7 @@
 import React from 'react';
 import sortBy from 'lodash/sortBy';
 
-const getPositionClass = position => `snake__sprite snake__sprite--x${position.x}y${position.y}`;
+const getPositionClass = position => `spacerace__sprite spacerace__sprite--x${position.x}y${position.y}`;
 
 let numberCounter = 0;
 const generateRandomPosition = () => {
@@ -21,7 +21,7 @@ const renderSnakes = (snakeState) => {
 
   const snakes = snakeState.map(state => (
     <div className="snake__container" key={i}>
-      <div className={`${getPositionClass(state.position)} snake__sprite--number${i}`} key={i++} />
+      <div className={`${getPositionClass(state.position)} spacerace__sprite--number${i}`} key={i++} />
     </div>
   ));
   return (

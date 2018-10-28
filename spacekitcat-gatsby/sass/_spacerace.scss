@@ -89,7 +89,7 @@ $snake-height: 16px;
     right: 16px;
 }
 
-.snake__sprite {
+.spacerace__sprite {
     position: absolute;   
     box-sizing: border-box;
     height: 2%;
@@ -117,8 +117,8 @@ $i: $container-width;
 @while $i >= 0 {
     $j: $container-width;
     @while $j >= 0 {    
-        .snake__sprite--x#{$i}y#{$j} { left: #{$i}px; top: #{$j}px; }
-        .snake__sprite--x#{$i}y#{$j}::before
+        .spacerace__sprite--x#{$i}y#{$j} { left: #{$i}px; top: #{$j}px; }
+        .spacerace__sprite--x#{$i}y#{$j}::before
         {
             position: absolute;
             color: yellow;
@@ -142,7 +142,7 @@ $s-max: 70;
 $l-min: 30;
 $l-max: 90;
 @for $i from 0 through 100 {
-    .snake__sprite--number#{$i} {
+    .spacerace__sprite--number#{$i} {
         animation: hyperShift ease-in 1s;
         background-color: hsl(random(360),$s-min+random($s-max+-$s-min),$l-min+random($l-max+-$l-min));
         box-sizing: border-box;
@@ -151,7 +151,7 @@ $l-max: 90;
         border-radius: 4px;
     }
 
-    .snake__sprite--number#{$i}::before
+    .spacerace__sprite--number#{$i}::before
     {
         animation: hyperShift ease-in 2s;
         position: absolute;
