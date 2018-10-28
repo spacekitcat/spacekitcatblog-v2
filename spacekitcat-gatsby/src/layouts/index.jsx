@@ -54,7 +54,7 @@ class Layout extends React.Component {
           <div className="projects__layout">
             <TextGridBox url="https://github.com/spacekitcat" revealedByDefault text="GitHub" className="box0" />
             <TextGridBox key="A2618" text="A2618" url="/A2618/" revealedByDefault className="box2" />
-            <TextGridBox key="A2718" text="A2718" url="/A2719/" revealedByDefault className="box3" />
+            <TextGridBox key="hackertextjs" text="HACKERTEXT.JS" url="/hackertextjs/" revealedByDefault className="box3" />
             <TextGridBox key="Unicode table" text="Unicode table" url="/unicode-table/" revealedByDefault className="box4" />
             <TextGridBox key="snake" text="gambling" url="/snake/" revealedByDefault className="box5" />
           </div>

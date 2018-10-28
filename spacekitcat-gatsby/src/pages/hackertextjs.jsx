@@ -19,7 +19,7 @@ class A2618 extends React.Component {
 
   render() {
     return (
-      <div><h1>PROJECT.A2618</h1></div>
+      <div><h1>HACKERTEXT.JS</h1></div>
     );
   }
 }
