@@ -1,0 +1,16 @@
+{
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "api.spacekitcat.com",
+        "Type": "A",
+        "AliasTarget": {
+          "DNSName": "d-numh1z56v6.execute-api.us-west-2.amazonaws.com",
+          "HostedZoneId": "Z2OJLYMUO9EFXC",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}
