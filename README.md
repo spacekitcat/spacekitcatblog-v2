@@ -1,3 +1,4 @@
+![Build status](https://s3-eu-west-2.amazonaws.com/codefactory-eu-west-2-prod-default-build-badges/passing.svg)
+
 (c) 2018
-![Build status](https://codebuild.eu-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiczdJTDZjL3VtOWpGRUlPTC9wU0dRQWVhZU40MTRlUW1oZmorNWljMlJYbElIWEVZN1R6TU9ubkgzeEVRZUp1dkJQWlpzWUlnUzg2Vmd0Qkg3ald6Wk1vPSIsIml2UGFyYW1ldGVyU3BlYyI6IkY2d2wyQXZLKytZTGlpN04iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
