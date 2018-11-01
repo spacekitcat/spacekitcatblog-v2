@@ -42,7 +42,7 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'S P A C E K I T C A T',
     servername: os.hostname(),
-    errstatus: 'EKEKEKEK',
+    errstatus: 'QWERTY',
     hackertextconfig: JSON.stringify(hacker_text_config)
   });
 });
