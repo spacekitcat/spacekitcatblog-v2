@@ -7,5 +7,5 @@ ADD spacekitcat-react /usr/src/app/
 RUN npm install
 RUN npm run build
 
-EXPOSE 3000
-ENTRYPOINT ["npm", "start"]  
+EXPOSE 5000
+ENTRYPOINT ["npx", "serve", "-s", "build"]  

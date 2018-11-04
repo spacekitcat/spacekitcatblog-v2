@@ -1,11 +1,8 @@
 import React from 'react';
-import { addDecorator, configure } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
-import { themes } from '@storybook/components';
-import Logo from './atoms/logo';
+import Logo from './atoms/logo-text';
 
 storiesOf('Button', module)
     .add('with text', () => (

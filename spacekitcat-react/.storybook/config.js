@@ -17,7 +17,7 @@ addDecorator(
     hierarchyRootSeparator: null,
     sidebarAnimations: true,
     selectedAddonPanel: undefined,
-    enableShortcuts: true, // true by default
+    enableShortcuts: true,
   })
 );
 

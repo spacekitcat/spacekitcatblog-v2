@@ -24,24 +24,11 @@
         }
     }
 
-    animation: color-pulser 5s ease-in;
+    animation: color-pulser 15s ease-in infinite;
 }
 
 .logo {
     position: relative;
-}
-
-.logo__text--before {
-    color: $fade-to-grey;
-    font-family: 'Cutive', serif;
-    letter-spacing: 5px;        
-    margin-bottom: 0;
-    margin-top: 0;
-    position: relative;
-
-    .logo__text-first-word {
-        @include color-pulser-animation($fade-to-grey, $dancing-in-the-dark, $simply-red, $all-yellow);
-    }
 }
 
 .logo__text {
@@ -55,17 +42,12 @@
     .logo__text-first-word {
         @include color-pulser-animation($green-sally-up, $fade-to-grey, $simply-red, $all-yellow);
     }
-}
 
-.logo__text--after {
-    color: $fade-to-grey;
-    font-family: 'Cutive', serif;
-    letter-spacing: 5px;        
-    margin-bottom: 0;
-    margin-top: 0;
-    position: relative;
-
-    .logo__text-first-word {
-        @include color-pulser-animation($fade-to-grey, $dancing-in-the-dark, $simply-red, $all-yellow);
+    &--alt {
+        color: $fade-to-grey;
+    
+        .logo__text-first-word {
+            @include color-pulser-animation($fade-to-grey, $dancing-in-the-dark, $simply-red, $all-yellow);
+        }
     }
 }
