@@ -21,4 +21,5 @@ addDecorator(
   })
 );
 
-configure(() => require('../src/stories/index.js'), module);
+configure(() => require('../src/stories/atoms/storybook.js'), module);
+configure(() => require('../src/stories/molecules/storybook.js'), module);

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive|Lato');
+@import url('https://fonts.googleapis.com/css?family=Monoton|VT323|Source+Code+Pro');
+@import 'palette';
+
+@mixin color-pulser-animation($original-color, $separator-color, $first-contrast-color, $second-contrast-color) { 
+    @keyframes color-pulser {
+        14% {
+            color: $original-color;
+        }
+        28% {
+            color: $separator-color;
+        }
+        42% {
+            color: $first-contrast-color;
+        }
+        56% {
+            color: $separator-color;
+        }
+        70% {
+            color: $second-contrast-color;
+        }
+        84% {
+            color: $original-color;
+        }
+    }
+
+    animation: color-pulser 15s ease-in infinite;
+}
+
+.logotext {
+    color: $green-sally-up;
+    font-family: 'Cutive', serif;
+    letter-spacing: 5px;        
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+    
+    .logotext__second-word {
+        @include color-pulser-animation($green-sally-up, $fade-to-grey, $simply-red, $all-yellow);
+    }
+
+    &--before {
+        color: $fade-to-grey;
+    
+        .logotext__second-word {
+            animation: inherit;
+        }
+
+        .logotext__first-word {
+            @include color-pulser-animation($fade-to-grey, $dancing-in-the-dark, $simply-red, $all-yellow);
+        }
+    }
+
+    &--after {
+        color: $fade-to-grey;
+        
+        .logotext__second-word {
+            animation: inherit;
+        }
+
+        .logotext__third-word {
+            @include color-pulser-animation($fade-to-grey, $dancing-in-the-dark, $simply-red, $all-yellow);
+        }
+    }
+}

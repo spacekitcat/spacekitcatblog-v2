@@ -1,23 +1,24 @@
 
 import React from 'react';
-import './_logo.scss';
+import './_logo-text.scss';
 
-const Logo = props => (
-    <div className="logo">
+const componentClasses = ({ before, after }) => {
+    let componentClasses = 'logotext';
+    componentClasses = componentClasses += before ? ' logotext--before' : '';
+    componentClasses = componentClasses += after ? ' logotext--after' : '';
 
-        <h1 className="logo__text logo__text--alt">
-            <span className="logo__text-first-word">SPACE</span>KITCAT
+    return componentClasses;
+}
+
+const LogoText = ({ before, after }) => {
+    return (
+        <h1 className={componentClasses({ before, after })}>
+            <span className="logotext__first-word">SPACE</span>
+            <span className="logotext__second-word">KIT</span>
+            <span className="logotext__third-word">CAT</span>
         </h1>
+    );
+}
 
-        <h1 className="logo__text">
-            SPACE<span className="logo__text-first-word">KIT</span>CAT
-        </h1>
-
-        <h1 className="logo__text logo__text--alt">
-            SPACEKIT<span className="logo__text-first-word">CAT</span>
-        </h1>
-    </div>
-);
-
-export default Logo;
+export default LogoText;
 
