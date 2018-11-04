@@ -4,3 +4,39 @@ $fade-to-grey: #4d4e5056;
 $green-sally-up: #70FF7F;
 $simply-red: rgb(255, 110, 110);
 
+@mixin swatch($color, $label) {
+    &--#{$label} {
+        background-color: $color;
+        position: relative;
+
+        &::after {
+            background-color: rgba(135, 161, 197, 0.918);
+            color: $color;
+            content: '#{$color}';
+            font-size: 18px;
+            letter-spacing: 1px;
+            position: absolute;
+            text-align: center;
+
+            top: 64px;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.colorpalette__swatch {
+    border-width: 1px;
+    border-style: solid;
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+
+    @include swatch($all-yellow, 'all-yellow');
+    @include swatch($dancing-in-the-dark, 'dancing-in-the-dark');
+    @include swatch($fade-to-grey, 'fade-to-grey');
+    @include swatch($green-sally-up, 'green-sally-up');
+    @include swatch($simply-red, 'simply-red');
+}
+
+
