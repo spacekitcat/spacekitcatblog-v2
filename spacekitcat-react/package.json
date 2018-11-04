@@ -13,7 +13,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-static": "NODE_ENV=production build-storybook -c .storybook -o .out"
   },
   "eslintConfig": {
     "extends": "react-app"
