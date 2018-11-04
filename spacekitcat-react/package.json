@@ -14,7 +14,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-static": "NODE_ENV=production build-storybook -c .storybook -o .out"
+    "build-storybook": "NODE_ENV=production build-storybook -s public -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,6 +31,7 @@
     "@storybook/addon-knobs": "^4.0.2",
     "@storybook/addon-options": "^4.0.2",
     "@storybook/react": "^4.0.2",
+    "@storybook/storybook-deployer": "^2.3.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0"
   }
