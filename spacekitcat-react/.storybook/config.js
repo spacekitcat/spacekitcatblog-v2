@@ -23,3 +23,6 @@ addDecorator(
 
 configure(() => require('../src/stories/atoms/storybook.js'), module);
 configure(() => require('../src/stories/molecules/storybook.js'), module);
+configure(() => require('../src/stories/organisms/storybook.js'), module);
+configure(() => require('../src/stories/templates/storybook.js'), module);
+configure(() => require('../src/stories/pages/storybook.js'), module);

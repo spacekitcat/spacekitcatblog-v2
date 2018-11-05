@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive|Lato');
 @import url('https://fonts.googleapis.com/css?family=Monoton|VT323|Source+Code+Pro');
 @import 'palette';
+@import 'typography';
 
 @mixin color-pulser-animation($original-color, $separator-color, $first-contrast-color, $second-contrast-color) { 
     @keyframes color-pulser {
@@ -28,8 +29,9 @@
 }
 
 .logotext {
+    @include large-logo;
+
     color: $green-sally-up;
-    font-family: 'Cutive', serif;
     letter-spacing: 5px;        
     margin-bottom: 0;
     margin-top: 0;

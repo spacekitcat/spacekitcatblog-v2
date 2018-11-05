@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive|Lato');
+@import 'palette';
+
+@mixin small-logo {
+    font-family: 'Cutive', serif;
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 5px;
+}
+
+@mixin large-logo {
+    font-family: 'Cutive', serif;
+    font-size: 41px;
+    letter-spacing: 5px;
+}
+
+.typographypreview {
+    width: 20vw;
+}
+
+.typographypreview__font {
+    margin-bottom: 16px;
+}
+
+.typographypreview__label {
+    @include small-logo;
+    color: $all-yellow;
+    margin-left: 24px;
+}
+
+.typographypreview__font--small-logo {
+    @include small-logo;
+    color: $green-sally-up;
+}
+
+.typographypreview__font--large-logo {
+    @include large-logo;
+    color: $green-sally-up;
+}
+

@@ -1,0 +1,22 @@
+@import '../atoms/palette';
+@import '../atoms/typography';
+
+.supernavbar {
+    background-color: $all-yellow;
+    box-sizing: border-box;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    right: 0;
+}
+
+.supernavbar__text {
+    @include small-logo;
+    color: $dancing-in-the-dark;
+    height: 100%;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+}

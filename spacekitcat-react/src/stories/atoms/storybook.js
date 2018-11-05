@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import LogoText from './logo-text';
 import './_palette.scss';
 
@@ -17,6 +17,28 @@ atoms.add('Color palette', () => (
         <div className="colorpalette__swatch colorpalette__swatch--dancing-in-the-dark" />
     </div>
 ));
+
+atoms.add('Typography', () => (
+    <div className="typographypreview">
+        <div className="typographypreview__view">
+            <div className="typographypreview__label">
+                small-logo
+            </div>
+            <div className="typographypreview__font typographypreview__font--small-logo">
+                {text('Preview text', 'SPACEKITCAT')}
+            </div>
+        </div>
+        <div className="typographypreview__view">
+            <div className="typographypreview__label">
+                large-logo
+            </div>
+            <div className="typographypreview__font typographypreview__font--large-logo">
+                {text('Preview text', 'SPACEKITCAT')}
+            </div>
+        </div>
+    </div>
+));
+
 
 atoms.add('Logo text', () => (
     <LogoText before={boolean('Before style', false)} after={boolean('After style', false)} />
