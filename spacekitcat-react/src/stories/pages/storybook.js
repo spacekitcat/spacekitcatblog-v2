@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Logo from '../molecules/logo';
+import LandingPage from './landing-page';
 
 const molecules = storiesOf('Pages', module);
 
 molecules.add('Landing page', () => (
-    <Logo />
+    <LandingPage />
 ));
