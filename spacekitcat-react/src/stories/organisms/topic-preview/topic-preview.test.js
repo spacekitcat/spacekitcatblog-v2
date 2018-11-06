@@ -2,15 +2,15 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 import React from 'react';
 import { shallow } from 'enzyme';
-import SuperNavBar from './super-nav-bar';
+import TopicPreview from '.';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('<SupernNvBar />', () => {
-    const component = () => shallow(<SuperNavBar />);
+describe('<TopicPreview />', () => {
+    const component = () => shallow(<TopicPreview />);
 
     it('renders the root element', () => {
-        expect(component().find('.supernavbar').length).toBe(1);
+        expect(component().find('.topicpreview').length).toBe(1);
     });
 
 });

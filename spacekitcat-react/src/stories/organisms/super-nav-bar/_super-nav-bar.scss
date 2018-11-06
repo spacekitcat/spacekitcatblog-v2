@@ -1,9 +1,10 @@
-@import '../atoms/palette';
-@import '../atoms/typography';
+@import '../../atoms/palette';
+@import '../../atoms/typography';
 
 .supernavbar {
-    background-color: $all-yellow;
+    background-color: $fade-to-grey;
     box-sizing: border-box;
+    height:38px;
     left: 0;
     position: absolute;
     text-align: left;
@@ -13,9 +14,9 @@
 
 .supernavbar__text {
     @include small-logo;
-    color: $dancing-in-the-dark;
+    color: $green-sally-up;
     height: 100%;
-    margin-top: 2px;
+    margin-top: 4px;
     margin-bottom: 0px;
     margin-left: 8px;
     vertical-align: middle;
