@@ -2,18 +2,45 @@
 @import '../../atoms/typography';
 
 .topicpreview {
+    position: relative;
     background-color: $fade-to-grey;
     box-sizing: border-box;
     padding: 42px;
     border-color: $dancing-in-the-dark;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    width: 70%;
+    border-left-style: solid;
+    border-width: 2px;
+    border-left-color: white;
+}
+
+.topicpreview__title {
+    @include small-logo;
+    text-align: right;
+    color: $green-sally-up;
+    width: 60%;
+    margin-left: 40%;
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: $green-sally-up;
+    }
+
+    a:hover {
+        color: $all-yellow;
+    }
 }
 
 .topicpreview__text {
     @include small-logo;
-    color: $green-sally-up;
     height: 100%;
     margin-top: 2px;
     margin-bottom: 0px;
     margin-left: 8px;
     vertical-align: middle;
+    text-align: left;
+    width: 80%;
 }
