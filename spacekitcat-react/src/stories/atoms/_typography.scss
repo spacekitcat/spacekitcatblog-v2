@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive|Lato');
 @import 'palette';
+@import 'sass-mq';
 
 @mixin small-logo {
     font-family: 'Cutive', serif;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 18px;
     letter-spacing: 5px;
+
+    @include mq($from: tablet) {
+        font-size: 26px;
+    }
 }
 
 @mixin large-logo {
     font-family: 'Cutive', serif;
-    font-size: 41px;
+    font-size: 26px;
     letter-spacing: 5px;
+
+    @include mq($from: tablet) {
+        font-size: 41px;
+    }
 }
 
 .typographypreview {
