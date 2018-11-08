@@ -29,6 +29,8 @@
     a {
         color: $green-sally-up;
         text-decoration: none;
+    
+        text-shadow: 4px -1px 0px $simply-red;
     }
 
     a:visited {
@@ -36,12 +38,12 @@
     }
 
     a:hover {
-        color: $all-yellow;
+        text-shadow: -4px 1px 0px blue;
     }
 
     a:active {
-        color: $dancing-in-the-dark;
-        background-color: $green-sally-up;
+        text-shadow: -7px 4px 0px blue;
+        background-color: $dancing-in-the-dark;
     }
 
     @include mq($from: tablet) {
