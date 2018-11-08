@@ -22,17 +22,17 @@ atoms.add('Typography', () => (
     <div className="typographypreview">
         <div className="typographypreview__view">
             <div className="typographypreview__label">
-                small-logo
+                eight
             </div>
-            <div className="typographypreview__font typographypreview__font--small-logo">
+            <div className="typographypreview__font typographypreview__font--eight">
                 {text('Preview text', 'SPACEKITCAT')}
             </div>
         </div>
         <div className="typographypreview__view">
             <div className="typographypreview__label">
-                large-logo
+                ten
             </div>
-            <div className="typographypreview__font typographypreview__font--large-logo">
+            <div className="typographypreview__font typographypreview__font--ten">
                 {text('Preview text', 'SPACEKITCAT')}
             </div>
         </div>

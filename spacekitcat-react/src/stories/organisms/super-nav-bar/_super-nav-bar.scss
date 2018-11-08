@@ -13,7 +13,7 @@
 }
 
 .supernavbar__text {
-    @include small-logo;
+    @include eight;
     color: $green-sally-up;
     height: 100%;
     margin-top: 4px;

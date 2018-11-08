@@ -12,21 +12,22 @@
     margin-top: 32px;
     width: 100%;
     border-left-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-left-color: white;
 
     @include mq($from: tablet) {
-        padding: 42px;
+        padding: 8px 16px 16px 24px;
         width: 70%;
     }
 }
 
 .topicpreview__title {
-    @include small-logo;
+    @include eight  ;
     color: $green-sally-up;
     text-align: left;
 
     a {
+        color: $green-sally-up;
         text-decoration: none;
     }
 
@@ -38,7 +39,13 @@
         color: $all-yellow;
     }
 
+    a:active {
+        color: $dancing-in-the-dark;
+        background-color: $green-sally-up;
+    }
+
     @include mq($from: tablet) {
+        margin-bottom: 18px;
         margin-left: 40%;
         text-align: right;
         width: 60%;
@@ -46,12 +53,18 @@
 }
 
 .topicpreview__text {
-    @include small-logo;
+    @include five;
     text-align: left;
     @include mq($from: tablet) {
-        margin-top: 2px;
+        margin-top: 16px;
         margin-bottom: 0px;
         margin-left: 8px;
-        width: 80%;
+        width: 100%;
     }
+    border-bottom-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-top-style: solid;
+    border-width: 1px;
+    padding: 16px 0;
 }

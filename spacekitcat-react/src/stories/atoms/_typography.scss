@@ -2,26 +2,54 @@
 @import 'palette';
 @import 'sass-mq';
 
-@mixin small-logo {
+@mixin ten {
+    font-family: 'Cutive', serif;
+    font-size: 28px;
+    letter-spacing: 5px;
+    line-height: 32px;
+
+    @include mq($from: tablet) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @include mq($from: desktop) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+}
+
+@mixin eight {
     font-family: 'Cutive', serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 5px;
+    line-height: 24px;
 
     @include mq($from: tablet) {
-        font-size: 26px;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    @include mq($from: desktop) {
+        font-size: 28px;
+        line-height: 32px;
     }
 }
 
-@mixin large-logo {
+@mixin five {
     font-family: 'Cutive', serif;
-    font-size: 26px;
+    font-weight: bold;
+    font-size: 15px;
     letter-spacing: 5px;
+    line-height: 20px;
 
     @include mq($from: tablet) {
-        font-size: 41px;
+        font-size: 16px;
+        line-height: 22px;
     }
 }
+
 
 .typographypreview {
     width: 20vw;
@@ -32,18 +60,18 @@
 }
 
 .typographypreview__label {
-    @include small-logo;
+    @include eight;
     color: $all-yellow;
     margin-left: 24px;
 }
 
-.typographypreview__font--small-logo {
-    @include small-logo;
+.typographypreview__font--eight {
+    @include eight;
     color: $green-sally-up;
 }
 
-.typographypreview__font--large-logo {
-    @include large-logo;
+.typographypreview__font--ten {
+    @include ten;
     color: $green-sally-up;
 }
 

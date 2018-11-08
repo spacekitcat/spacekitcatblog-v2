@@ -29,7 +29,7 @@
 }
 
 .logotext {
-    @include large-logo;
+    @include ten;
 
     color: $green-sally-up;
     letter-spacing: 5px;        
