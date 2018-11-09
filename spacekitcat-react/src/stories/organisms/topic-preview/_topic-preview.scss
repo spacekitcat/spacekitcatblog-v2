@@ -8,16 +8,16 @@
     box-sizing: border-box;
     padding: 10px;
     border-color: $dancing-in-the-dark;
-    margin-bottom: 32px;
-    margin-top: 32px;
-    width: 100%;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 90%;
     border-left-style: solid;
     border-width: 1px;
     border-left-color: white;
 
     @include mq($from: tablet) {
         padding: 8px 16px 16px 24px;
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -30,7 +30,7 @@
         color: $green-sally-up;
         text-decoration: none;
     
-        text-shadow: 4px -1px 0px $simply-red;
+        text-shadow: 4px 0px 0px $simply-red;
     }
 
     a:visited {
@@ -38,13 +38,13 @@
     }
 
     a:hover {
-        text-shadow: -4px 1px 0px blue;
+        text-shadow: -4px 0px 0px blue;
     }
 
+    a:focus,
     a:active {
-        text-shadow: -7px 4px 0px blue;
-        background-color: $dancing-in-the-dark;
-    }
+        text-shadow: -10px 10px 0px blue;
+        background-color: $dancing-in-the-dark;    }
 
     @include mq($from: tablet) {
         margin-bottom: 18px;
