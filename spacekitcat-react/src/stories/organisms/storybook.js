@@ -10,5 +10,5 @@ molecules
         <SuperNavBar />)
     )
     .add('TopicPreview', () => (
-        <TopicPreview />)
+        <TopicPreview primaryExternalUrl='#nowehere' title='Bowser based fan fic' abstractText='Explore the epic world of Bowser' />)
     );

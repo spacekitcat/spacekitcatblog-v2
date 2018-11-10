@@ -1,0 +1,16 @@
+@import '../atoms/palette';
+@import '../atoms/typography';
+@import '../atoms/sass-mq';
+
+.landingpage {
+    background-color: #282c34;
+}
+
+.landingpage__contentlist {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 98px;
+}

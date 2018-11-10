@@ -7,7 +7,7 @@ import TopicPreview from '.';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<TopicPreview />', () => {
-    const component = () => shallow(<TopicPreview />);
+    const component = () => shallow(<TopicPreview primaryExternalUrl='' title='' abstractText='' />);
 
     it('renders the root element', () => {
         expect(component().find('.topicpreview').length).toBe(1);
