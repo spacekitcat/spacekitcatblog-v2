@@ -7,10 +7,21 @@ import TopicPreview from '.';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<TopicPreview />', () => {
-    const component = () => shallow(<TopicPreview primaryExternalUrl='' title='' abstractText='' />);
+    const primaryExternalUrl = 'primaryExternalUrlValue';
+    const title = 'titleValue';
+    const abstractText = 'abstractTextValue';
 
-    it('renders the root element', () => {
-        expect(component().find('.topicpreview').length).toBe(1);
+    const component = () => shallow(<TopicPreview primaryExternalUrl={primaryExternalUrl} title={title} abstractText={abstractText} />);
+
+    it('should render TopicPreview with the expected title', () => {
+        expect(component().find('.topicpreview .topicpreview__title').text()).toBe('titleValue');
     });
 
+    it('should render TopicPreview with the expected anchor href', () => {
+        expect(component().find('.topicpreview .topicpreview__title a').prop('href')).toBe(primaryExternalUrl);
+    });
+
+    it('should render TopicPreview with the expected abstract', () => {
+        expect(component().find('.topicpreview .topicpreview__text').text()).toBe(abstractText);
+    });
 });
