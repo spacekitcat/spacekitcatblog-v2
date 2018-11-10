@@ -4,7 +4,7 @@
 .supernavbar {
     background-color: $fade-to-grey;
     box-sizing: border-box;
-    height:38px;
+    height:0px;
     left: 0;
     position: absolute;
     text-align: left;
@@ -14,10 +14,29 @@
 
 .supernavbar__text {
     @include eight;
+    border-right: dotted;
+    border-width:1px;
+    border-color: white;
+
+    background-color: #43474e;
+    border-color: white;
+    box-sizing: border-box;
     color: $green-sally-up;
-    height: 100%;
-    margin-top: 4px;
-    margin-bottom: 0px;
+    margin-top: 26px;
+    //margin-bottom: 0px;
     margin-left: 8px;
     vertical-align: middle;
+    text-shadow: 4px 0px 0px $simply-red;
+    margin-left: 20%;
+    margin-bottom: 0px;
+    width: 80%;
+    padding-left: 21px;
+    padding-top: 21px;
+    padding-bottom: 14px;
+    
+
+    @include mq($from: tablet) {
+        margin-left: 10%;
+        width: 80%;
+    }
 }
