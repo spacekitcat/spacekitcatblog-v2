@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms Color palette 1`] = `
+<div
+  className="colorpalette"
+>
+  <div
+    className="colorpalette__swatch colorpalette__swatch--simply-red"
+  />
+  <div
+    className="colorpalette__swatch colorpalette__swatch--green-sally-up"
+  />
+  <div
+    className="colorpalette__swatch colorpalette__swatch--all-yellow"
+  />
+  <div
+    className="colorpalette__swatch colorpalette__swatch--fade-to-grey"
+  />
+  <div
+    className="colorpalette__swatch colorpalette__swatch--dancing-in-the-dark"
+  />
+  <div
+    className="colorpalette__swatch colorpalette__swatch--blue-monday"
+  />
+  <div
+    className="colorpalette__swatch colorpalette__swatch--white-wedding"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms Logo text 1`] = `
+<h1
+  className="logotext"
+>
+  <span
+    className="logotext__first-word"
+  >
+    SPACE
+  </span>
+  <span
+    className="logotext__second-word"
+  >
+    KIT
+  </span>
+  <span
+    className="logotext__third-word"
+  >
+    CAT
+  </span>
+</h1>
+`;
+
+exports[`Storyshots Atoms Typography 1`] = `
+<div
+  className="typographypreview"
+>
+  <div
+    className="typographypreview__view"
+  >
+    <div
+      className="typographypreview__label"
+    >
+      five
+    </div>
+    <div
+      className="typographypreview__font typographypreview__font--five"
+    >
+      SPACEKITCAT
+    </div>
+  </div>
+  <div
+    className="typographypreview__view"
+  >
+    <div
+      className="typographypreview__label"
+    >
+      eight
+    </div>
+    <div
+      className="typographypreview__font typographypreview__font--eight"
+    >
+      SPACEKITCAT
+    </div>
+  </div>
+  <div
+    className="typographypreview__view"
+  >
+    <div
+      className="typographypreview__label"
+    >
+      ten
+    </div>
+    <div
+      className="typographypreview__font typographypreview__font--ten"
+    >
+      SPACEKITCAT
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecules Logo 1`] = `
+<div
+  className="logo"
+>
+  <h1
+    className="logotext logotext--before"
+  >
+    <span
+      className="logotext__first-word"
+    >
+      SPACE
+    </span>
+    <span
+      className="logotext__second-word"
+    >
+      KIT
+    </span>
+    <span
+      className="logotext__third-word"
+    >
+      CAT
+    </span>
+  </h1>
+  <h1
+    className="logotext"
+  >
+    <span
+      className="logotext__first-word"
+    >
+      SPACE
+    </span>
+    <span
+      className="logotext__second-word"
+    >
+      KIT
+    </span>
+    <span
+      className="logotext__third-word"
+    >
+      CAT
+    </span>
+  </h1>
+  <h1
+    className="logotext logotext--after"
+  >
+    <span
+      className="logotext__first-word"
+    >
+      SPACE
+    </span>
+    <span
+      className="logotext__second-word"
+    >
+      KIT
+    </span>
+    <span
+      className="logotext__third-word"
+    >
+      CAT
+    </span>
+  </h1>
+</div>
+`;
+
+exports[`Storyshots Organisms SuperNavBar 1`] = `
+<div
+  className="supernavbar"
+>
+  <p
+    className="supernavbar__text"
+  >
+    <span
+      aria-label="Logo, a small rocket emoji"
+      role="img"
+    />
+     SPACEKITCAT
+  </p>
+</div>
+`;
+
+exports[`Storyshots Organisms TopicPreview 1`] = `
+<div
+  className="topicpreview"
+>
+  <h1
+    className="topicpreview__title"
+  >
+    <a
+      href="#nowehere"
+    >
+      Bowser based fan fic
+    </a>
+  </h1>
+  <p
+    className="topicpreview__text"
+  >
+    Explore the epic world of Bowser
+  </p>
+</div>
+`;
+
+exports[`Storyshots Pages Landing page 1`] = `
+<div
+  className="landingpage"
+>
+  <div
+    className="supernavbar"
+  >
+    <p
+      className="supernavbar__text"
+    >
+      <span
+        aria-label="Logo, a small rocket emoji"
+        role="img"
+      />
+       SPACEKITCAT
+    </p>
+  </div>
+  <div
+    className="landingpage__contentlist"
+  >
+    <div
+      className="topicpreview"
+    >
+      <h1
+        className="topicpreview__title"
+      >
+        <a
+          href="https://github.com/spacekitcat/libz77"
+        >
+          LZ77 compression algorothm exploration
+        </a>
+      </h1>
+      <p
+        className="topicpreview__text"
+      >
+        Welcome. No one's home! Now scram--and don't come back!
+      </p>
+    </div>
+    <div
+      className="topicpreview"
+    >
+      <h1
+        className="topicpreview__title"
+      >
+        <a
+          href="https://github.com/spacekitcat/hackertextjs"
+        >
+          Pure text Matrix esque animation experiments
+        </a>
+      </h1>
+      <p
+        className="topicpreview__text"
+      >
+        I'm the biggest, baddest brute around, and don't you forget it.
+      </p>
+    </div>
+    <div
+      className="topicpreview"
+    >
+      <h1
+        className="topicpreview__title"
+      >
+        <a
+          href="https://github.com/spacekitcat/example-lambda-project"
+        >
+          AWS Lambda exploration
+        </a>
+      </h1>
+      <p
+        className="topicpreview__text"
+      >
+        BAH! Nobody apologizes on my behalf! I'll be back in 3 rounds with a fiendish surprise for the player with my card!
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Templates Landing page 1`] = `
+<div
+  className="landingpage"
+>
+  <div
+    className="supernavbar"
+  >
+    <p
+      className="supernavbar__text"
+    >
+      <span
+        aria-label="Logo, a small rocket emoji"
+        role="img"
+      />
+       SPACEKITCAT
+    </p>
+  </div>
+  <div
+    className="landingpage__contentlist"
+  >
+    <div
+      className="topicpreview"
+    >
+      <h1
+        className="topicpreview__title"
+      >
+        <a
+          href="#pulp"
+        >
+          Common People
+        </a>
+      </h1>
+      <p
+        className="topicpreview__text"
+      >
+        She came from Greece, she had a thirst for knowledge.
+      </p>
+    </div>
+    <div
+      className="topicpreview"
+    >
+      <h1
+        className="topicpreview__title"
+      >
+        <a
+          href="#pixies"
+        >
+          Hey
+        </a>
+      </h1>
+      <p
+        className="topicpreview__text"
+      >
+        Hey. Been trying to meet you. Hey. Must be a devil between us.
+      </p>
+    </div>
+  </div>
+</div>
+`;

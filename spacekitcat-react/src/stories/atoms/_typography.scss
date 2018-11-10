@@ -65,6 +65,12 @@
     margin-left: 24px;
 }
 
+
+.typographypreview__font--five {
+    @include five;
+    color: $green-sally-up;
+}
+
 .typographypreview__font--eight {
     @include eight;
     color: $green-sally-up;

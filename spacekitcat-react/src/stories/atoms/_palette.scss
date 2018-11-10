@@ -5,7 +5,7 @@ $fade-to-grey: #4d4e5056;
 $green-sally-up: #70FF7F;
 $simply-red: rgb(255, 110, 110);
 $blue-monday: #6464fd;
-$white-wedding: rgba(245, 245, 245, 0.966);
+$white-wedding: rgb(245, 240, 245);
 
 @mixin swatch($color, $label) {
     &--#{$label} {
@@ -40,6 +40,8 @@ $white-wedding: rgba(245, 245, 245, 0.966);
     @include swatch($fade-to-grey, 'fade-to-grey');
     @include swatch($green-sally-up, 'green-sally-up');
     @include swatch($simply-red, 'simply-red');
+    @include swatch($blue-monday, 'blue-monday');
+    @include swatch($white-wedding, 'white-wedding');
 }
 
 

@@ -15,11 +15,21 @@ atoms.add('Color palette', () => (
         <div className="colorpalette__swatch colorpalette__swatch--all-yellow" />
         <div className="colorpalette__swatch colorpalette__swatch--fade-to-grey" />
         <div className="colorpalette__swatch colorpalette__swatch--dancing-in-the-dark" />
+        <div className="colorpalette__swatch colorpalette__swatch--blue-monday" />
+        <div className="colorpalette__swatch colorpalette__swatch--white-wedding" />
     </div>
 ));
 
 atoms.add('Typography', () => (
     <div className="typographypreview">
+         <div className="typographypreview__view">
+            <div className="typographypreview__label">
+                five
+            </div>
+            <div className="typographypreview__font typographypreview__font--five">
+                {text('Preview text', 'SPACEKITCAT')}
+            </div>
+        </div>
         <div className="typographypreview__view">
             <div className="typographypreview__label">
                 eight
