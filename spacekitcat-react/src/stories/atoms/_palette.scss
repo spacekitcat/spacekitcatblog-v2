@@ -1,8 +1,11 @@
 $all-yellow: rgb(245, 255, 112);
+$ultra-black: #43474e;
 $dancing-in-the-dark: #282c34;
 $fade-to-grey: #4d4e5056;
 $green-sally-up: #70FF7F;
 $simply-red: rgb(255, 110, 110);
+$blue-monday: #6464fd;
+$white-wedding: rgba(245, 245, 245, 0.966);
 
 @mixin swatch($color, $label) {
     &--#{$label} {

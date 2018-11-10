@@ -13,7 +13,7 @@
     width: 90%;
     border-left-style: dotted;
     border-width: 1px;
-    border-left-color: white;
+    border-left-color: $white-wedding;
 
     @include mq($from: tablet) {
         padding: 8px 16px 16px 24px;
@@ -38,12 +38,12 @@
     }
 
     a:hover {
-        text-shadow: -4px 0px 0px blue;
+        text-shadow: -4px 0px 0px $blue-monday;
     }
 
     a:focus,
     a:active {
-        text-shadow: -10px 10px 0px blue;
+        text-shadow: -10px 10px 0px $blue-monday;
         background-color: $dancing-in-the-dark;    }
 
     @include mq($from: tablet) {

@@ -16,10 +16,9 @@
     @include eight;
     border-right: dotted;
     border-width:1px;
-    border-color: white;
 
-    background-color: #43474e;
-    border-color: white;
+    background-color: $ultra-black;
+    border-color: $white-wedding;
     box-sizing: border-box;
     color: $green-sally-up;
     margin-top: 26px;
