@@ -170,11 +170,7 @@ exports[`Storyshots Organisms SuperNavBar 1`] = `
   <p
     className="supernavbar__text"
   >
-    <span
-      aria-label="Logo, a small rocket emoji"
-      role="img"
-    />
-     SPACEKITCAT
+    SPACEKITCAT
   </p>
 </div>
 `;
@@ -210,11 +206,7 @@ exports[`Storyshots Pages Landing page 1`] = `
     <p
       className="supernavbar__text"
     >
-      <span
-        aria-label="Logo, a small rocket emoji"
-        role="img"
-      />
-       SPACEKITCAT
+      SPACEKITCAT
     </p>
   </div>
   <div
@@ -239,7 +231,7 @@ exports[`Storyshots Pages Landing page 1`] = `
       </p>
     </div>
     <div
-      className="topicpreview"
+      className="topicpreview topicpreview--alt"
     >
       <h1
         className="topicpreview__title"
@@ -288,11 +280,7 @@ exports[`Storyshots Templates Landing page 1`] = `
     <p
       className="supernavbar__text"
     >
-      <span
-        aria-label="Logo, a small rocket emoji"
-        role="img"
-      />
-       SPACEKITCAT
+      SPACEKITCAT
     </p>
   </div>
   <div
@@ -317,7 +305,7 @@ exports[`Storyshots Templates Landing page 1`] = `
       </p>
     </div>
     <div
-      className="topicpreview"
+      className="topicpreview topicpreview--alt"
     >
       <h1
         className="topicpreview__title"
