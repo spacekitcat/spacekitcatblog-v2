@@ -15,23 +15,15 @@
 
 .supernavbar__text {
     @include eight;
-    border-color: $white-wedding;
-    box-sizing: border-box;
-    color: $green-sally-up;
-    vertical-align: middle;
-    text-shadow: 4px 0px 0px $simply-red;
-    width: 100%;
-    overflow:hidden;
-    white-space: nowrap;
+    @include content-wrap;
 
-    padding: 20px 0 14px 40px;
-    margin: 0 0 0 10px;
-    
-    @include mq($from: tablet) {
-        width: 50%;
-        padding: 16px 0 6px 24px;
-        margin: 0 0 0 0px;
-    }
+    box-sizing: border-box;
+    vertical-align: middle;
+
+    color: $green-sally-up;
+    text-shadow: 4px 0px 0px $simply-red;
+
+    text-align: right;
 }
 
 
