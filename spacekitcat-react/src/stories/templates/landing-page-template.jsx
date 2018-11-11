@@ -11,7 +11,7 @@ const LandingPageTemplate = ( { content } ) => (
         {content &&
             <div className="landingpage__contentlist">
                 {content.map((topic, index) =>
-                <TopicPreview key={index} primaryExternalUrl={topic.primaryExternalUrl} title={topic.title} abstractText={topic.abstractText} altstyle={index % 2 === 0} />
+                <TopicPreview key={index} primaryExternalUrl={topic.primaryExternalUrl} title={topic.title} abstractText={topic.abstractText} altstyle={index % 2 !== 0} />
                 )}
             </div>
         }

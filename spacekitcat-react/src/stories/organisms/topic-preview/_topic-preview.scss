@@ -2,7 +2,7 @@
 @import '../../atoms/typography';
 @import '../../atoms/sass-mq';
 
-@keyframes preview-loadin-animation {
+@keyframes preview-loadin-from-left-animation {
     0% {
         margin-right: -1000px;
     }
@@ -20,7 +20,7 @@
     }
 }
 
-@keyframes preview-loadin-animation-alt {
+@keyframes preview-loadin-from-right-animation {
     0% {
         margin-right: 1000px;
     }
@@ -52,10 +52,10 @@
     border-top-color: $simply-red;
     border-bottom-color: $green-sally-up;
 
-    animation: preview-loadin-animation 0.75s ease-in-out;
+    animation: preview-loadin-from-left-animation 0.75s ease-in-out;
 
     &--alt {
-        animation: preview-loadin-animation-alt 0.75s ease-in-out;
+        animation: preview-loadin-from-right-animation 0.75s ease-in-out;
     }
 
     @include mq($from: tablet) {
