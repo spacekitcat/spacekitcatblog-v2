@@ -2,22 +2,93 @@
 @import '../../atoms/typography';
 @import '../../atoms/sass-mq';
 
+@keyframes preview-loadin-animation {
+    0% {
+        margin-top: 1px;
+        margin-right: -1000px;
+    }
+    25% {
+        margin-top: 1px;
+        margin-right: 200px;
+    }
+    50% {
+        margin-top: -1px;
+        margin-right: -50px;
+    }
+    75% {
+        margin-top: -1px;
+        margin-right: 25px;
+    }
+    100% {
+        margin-bottom: inherit;
+        margin-right: inherit;
+    }
+}
+
+@keyframes preview-loadin-animation-alt {
+    0% {
+        margin-top: -1px;
+        margin-right: 1000px;
+    }
+    25% {
+        margin-top: -1px;
+        margin-right: -200px;
+    }
+    50% {
+        margin-top: 1px;
+        margin-right: 50px;
+    }
+    75% {
+        margin-top: 1px;
+        margin-right: -25px;
+    }
+    100% {
+        margin-bottom: inherit;
+        margin-right: inherit;
+    }
+}
+
 .topicpreview {
     position: relative;
-    background-color: $fade-to-grey;
+    background-color: rgb(70, 68, 109);
     box-sizing: border-box;
     padding: 10px;
     border-color: $dancing-in-the-dark;
     margin-bottom: 0px;
-    margin-top: 25px;
     width: 90%;
-    border-left-style: dotted;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
     border-width: 1px;
-    border-left-color: $white-wedding;
+    border-top-color: $simply-red;
+    border-bottom-color: $green-sally-up;
+
+    animation: preview-loadin-animation 0.75s ease-in-out;
 
     @include mq($from: tablet) {
-        padding: 8px 16px 16px 24px;
-        width: 80%;
+        padding: 32px 8px 48px 8px;
+        width: 50%;
+    }
+}
+
+.topicpreview--alt {
+    position: relative;
+    background-color: rgb(70, 68, 109);
+    box-sizing: border-box;
+    padding: 10px;
+    border-color: $dancing-in-the-dark;
+    margin-bottom: 0px;
+    width: 90%;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-width: 1px;
+    border-top-color: $simply-red;
+    border-bottom-color: $green-sally-up;
+
+    animation: preview-loadin-animation-alt 0.75s ease-in-out;
+
+    @include mq($from: tablet) {
+        padding: 32px 8px 48px 8px;
+        width: 50%;
     }
 }
 
@@ -47,10 +118,11 @@
         background-color: $dancing-in-the-dark;    }
 
     @include mq($from: tablet) {
-        margin-bottom: 18px;
-        margin-left: 40%;
-        text-align: right;
-        width: 60%;
+        margin-bottom: 0px;
+        padding-bottom: 0;
+        width: 80%;
+        margin-left: 16px;
+        margin-right: 0%;
     }
 }
 
@@ -58,14 +130,16 @@
     @include five;
     text-align: left;
     @include mq($from: tablet) {
-        margin-top: 16px;
+        margin-top: 0px;
         margin-bottom: 0px;
         margin-left: 8px;
-        width: 100%;
+        width: 85%;
+        margin-left: 16px;
+        margin-right: 0%;
     }
     color: $white-wedding;
     border-color: $white-wedding;
-    border-top-style: solid;
     border-width: 1px;
     padding: 16px 0;
+
 }

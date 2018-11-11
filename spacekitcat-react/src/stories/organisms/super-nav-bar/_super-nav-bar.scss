@@ -2,39 +2,38 @@
 @import '../../atoms/typography';
 
 .supernavbar {
-    background-color: $fade-to-grey;
+    background-color: rgb(70, 68, 109);
+    
     box-sizing: border-box;
-    height:0px;
-    left: 0;
-    position: absolute;
+    position: relative;
     text-align: left;
-    top: 0;
-    right: 0;
+    text-align: left;
+
+    border-top-color: $simply-red;
+    border-bottom-color: $green-sally-up;
+    border-width: 1px;
+    border-style: dotted;
 }
 
 .supernavbar__text {
     @include eight;
-    border-right: dotted;
-    border-width:1px;
-
-    background-color: $ultra-black;
     border-color: $white-wedding;
     box-sizing: border-box;
     color: $green-sally-up;
-    margin-top: 26px;
-    margin-left: 8px;
     vertical-align: middle;
     text-shadow: 4px 0px 0px $simply-red;
-    margin-left: 5%;
-    margin-bottom: 0px;
-    width: 90%;
-    padding-left: 21px;
-    padding-top: 21px;
-    padding-bottom: 14px;
-    
+    width: 100%;
+    overflow:hidden;
+    white-space: nowrap;
 
+    padding: 20px 0 14px 40px;
+    margin: 0 0 0 10px;
+    
     @include mq($from: tablet) {
-        margin-left: 10%;
-        width: 80%;
+        width: 50%;
+        padding: 16px 0 6px 24px;
+        margin: 0 0 0 0px;
     }
 }
+
+

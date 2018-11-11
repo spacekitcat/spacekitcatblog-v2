@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive|Lato');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Quicksand|Roboto|Roboto+Condensed|Roboto+Mono|Shadows+Into+Light|Source+Code+Pro');
 @import 'palette';
 @import 'sass-mq';
 
@@ -38,10 +39,10 @@
 }
 
 @mixin five {
-    font-family: 'Cutive', serif;
+    font-family: 'Source Code Pro', serif;
+   
     font-weight: bold;
     font-size: 15px;
-    letter-spacing: 5px;
     line-height: 20px;
 
     @include mq($from: tablet) {
