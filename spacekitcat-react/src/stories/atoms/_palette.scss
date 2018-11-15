@@ -1,47 +1,48 @@
-$all-yellow: rgb(245, 255, 112);
+$simply-red: #fc7e7e;
+$green-sally-up: rgb(124, 255, 137);
+$blue-monday: #6464fd;
+
+$all-yellow: #f5ff70;
 $ultra-black: #43474e;
 $dancing-in-the-dark: #282c34;
 $fade-to-grey: #4d4e50;
-$green-sally-up: #70FF7F;
-$simply-red: rgb(255, 110, 110);
-$blue-monday: #6464fd;
-$white-wedding: rgb(245, 240, 245);
+$white-wedding: #f5f0f5;
+
+$content-background: #46446d;
 
 @mixin swatch($color, $label) {
-    &--#{$label} {
-        background-color: $color;
-        position: relative;
+  &--#{$label} {
+    background-color: $color;
+    position: relative;
 
-        &::after {
-            background-color: rgba(135, 161, 197, 0.918);
-            color: $color;
-            content: '#{$color}';
-            font-size: 18px;
-            letter-spacing: 1px;
-            position: absolute;
-            text-align: center;
+    &::after {
+      background-color: rgba(139, 172, 223, 0.918);
+      color: $color;
+      content: '#{$color}';
+      font-size: 18px;
+      letter-spacing: 1px;
+      position: absolute;
+      text-align: center;
 
-            bottom: 54px;
-            left: 0;
-            right: 0;
-        }
+      bottom: 54px;
+      left: 0;
+      right: 0;
     }
+  }
 }
 
 .colorpalette__swatch {
-    border-width: 1px;
-    border-style: solid;
-    display: inline-block;
-    width: 128px;
-    height: 128px;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  width: 128px;
+  height: 128px;
 
-    @include swatch($all-yellow, 'all-yellow');
-    @include swatch($dancing-in-the-dark, 'dancing-in-the-dark');
-    @include swatch($fade-to-grey, 'fade-to-grey');
-    @include swatch($green-sally-up, 'green-sally-up');
-    @include swatch($simply-red, 'simply-red');
-    @include swatch($blue-monday, 'blue-monday');
-    @include swatch($white-wedding, 'white-wedding');
+  @include swatch($all-yellow, 'all-yellow');
+  @include swatch($dancing-in-the-dark, 'dancing-in-the-dark');
+  @include swatch($fade-to-grey, 'fade-to-grey');
+  @include swatch($green-sally-up, 'green-sally-up');
+  @include swatch($simply-red, 'simply-red');
+  @include swatch($blue-monday, 'blue-monday');
+  @include swatch($white-wedding, 'white-wedding');
 }
-
-

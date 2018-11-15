@@ -1,29 +1,155 @@
 @import '../../atoms/main';
 
-.supernavbar {
-    background-color: rgb(70, 68, 109);
-    
-    box-sizing: border-box;
-    position: relative;
-    text-align: left;
-    text-align: left;
+@keyframes sprite-move-about {
+  0% {
+    left: 0px;
+    margin-top: 6px;
+  }
+  5% {
+    left: 20px;
+    margin-top: 6px;
+  }
 
-    border-bottom-color: $green-sally-up;
-    border-width: 1px;
-    border-style: dotted;
+  10% {
+    left: 40px;
+    margin-top: 6px;
+  }
+
+  15% {
+    left: 60px;
+    margin-top: 0px;
+  }
+
+  20% {
+    left: 80px;
+    margin-top: 6px;
+  }
+
+  25% {
+    left: 100px;
+    margin-top: 6px;
+  }
+
+  30% {
+    left: 120px;
+    margin-top: 6px;
+  }
+
+  35% {
+    left: 140px;
+    margin-top: 6px;
+  }
+
+  40% {
+    left: 160px;
+    margin-top: 0px;
+  }
+
+  45% {
+    left: 180px;
+    margin-top: 6px;
+  }
+
+  50% {
+    left: 200px;
+    margin-top: 6px;
+  }
+
+  55% {
+    left: 220px;
+    margin-top: 6px;
+  }
+
+  60% {
+    left: 240px;
+    margin-top: 6px;
+  }
+
+  65% {
+    left: 260px;
+    margin-top: 0px;
+  }
+
+  70% {
+    left: 280px;
+    margin-top: 6px;
+  }
+
+  75% {
+    left: 300px;
+    margin-top: 6px;
+  }
+
+  80% {
+    left: 320px;
+    margin-top: 6px;
+  }
+
+  85% {
+    left: 340px;
+    margin-top: 6px;
+  }
+
+  90% {
+    left: 360px;
+    margin-top: 0px;
+  }
+
+  95% {
+    left: 380px;
+    margin-top: 6px;
+  }
+
+  100% {
+    left: 400px;
+    margin-top: 6px;
+  }
+}
+
+.supernavbar {
+  background-color: $content-background;
+
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  text-align: left;
+  height: 56px;
+
+  border-bottom-color: $green-sally-up;
+  border-width: 1px;
+  border-style: dotted;
 }
 
 .supernavbar__text {
-    @include eight;
-    @include content-wrap;
+  @include eight;
+  @include content-wrap;
 
-    box-sizing: border-box;
-    vertical-align: middle;
+  box-sizing: border-box;
+  vertical-align: middle;
 
-    color: $green-sally-up;
-    text-shadow: 4px 0px 0px $simply-red;
+  color: $green-sally-up;
+  text-shadow: 4px 0px 0px $simply-red;
 
-    text-align: right;
+  text-align: right;
 }
 
+.supernavbar__spritepen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
+.supernavbar__sprite {
+  animation: 2s sprite-move-about 1 linear;
+  position: relative;
+  margin-top: 6px;
+  left: 400px;
+}
+
+.supernavbar__sprite img {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+}
