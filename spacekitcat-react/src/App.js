@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import LandingPage  from './stories/pages/landing-page';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import LandingPage from './stories/pages/landing-page';
+import NotFoundPage from './stories/pages/not-found-page';
 
-class App extends Component {
-  render() {
-    return (
-      <LandingPage />
-    );
-  }
-}
+const Index = () => <LandingPage />;
+
+const NoMatch = ({ location }) => <NotFoundPage />;
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/" exact component={Index} />
+      <Route component={NoMatch} />
+    </Switch>
+  </Router>
+);
 
 export default App;

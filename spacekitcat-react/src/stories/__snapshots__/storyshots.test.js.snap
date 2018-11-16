@@ -167,6 +167,18 @@ exports[`Storyshots Organisms SuperNavBar 1`] = `
 <div
   className="supernavbar"
 >
+  <div
+    className="supernavbar__spritepen"
+  >
+    <div
+      className="supernavbar__sprite"
+    >
+      <img
+        alt="A small, 8-bit style sprite. Imagine the head of Nintendo's Mario with two giant legs instead of a torso."
+        src="discodavina.gif"
+      />
+    </div>
+  </div>
   <p
     className="supernavbar__text"
   >
@@ -203,6 +215,18 @@ exports[`Storyshots Pages Landing page 1`] = `
   <div
     className="supernavbar"
   >
+    <div
+      className="supernavbar__spritepen"
+    >
+      <div
+        className="supernavbar__sprite"
+      >
+        <img
+          alt="A small, 8-bit style sprite. Imagine the head of Nintendo's Mario with two giant legs instead of a torso."
+          src="discodavina.gif"
+        />
+      </div>
+    </div>
     <p
       className="supernavbar__text"
     >
@@ -277,6 +301,18 @@ exports[`Storyshots Templates Landing page 1`] = `
   <div
     className="supernavbar"
   >
+    <div
+      className="supernavbar__spritepen"
+    >
+      <div
+        className="supernavbar__sprite"
+      >
+        <img
+          alt="A small, 8-bit style sprite. Imagine the head of Nintendo's Mario with two giant legs instead of a torso."
+          src="discodavina.gif"
+        />
+      </div>
+    </div>
     <p
       className="supernavbar__text"
     >
