@@ -29,6 +29,7 @@
 
 .supernavbar__spritepen {
   position: absolute;
+  @include content-wrap;
   top: 0;
   bottom: 0;
   left: 0;
@@ -37,8 +38,8 @@
 
 .supernavbar__sprite {
   position: relative;
-  margin-top: 6px;
-  left: 400px;
+  margin-top: -8px;
+  margin-bottom: 0;
 }
 
 .supernavbar__sprite img {
